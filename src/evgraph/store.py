@@ -78,6 +78,12 @@ class EvidenceGraph:
             key=lambda n: n.t_obs[0],
         )
 
+    def records(self) -> list:
+        """Every node, then every edge, then every belief: an order that can be re-added."""
+        edges = [e for out in self.out_edges.values() for e in out]
+        beliefs = [v for history in self.beliefs.values() for v in history]
+        return [*self.nodes.values(), *edges, *beliefs]
+
     def veracity(self, node_id: str) -> Optional[Veracity]:
         history = self.beliefs.get(node_id)
         return max(history, key=lambda v: v.at) if history else None

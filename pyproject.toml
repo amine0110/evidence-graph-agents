@@ -16,4 +16,4 @@ test = ["pytest>=8"]
 where = ["src"]
 
 [tool.pytest.ini_options]
-pythonpath = ["src"]
+pythonpath = ["src", "experiments/c3_agents"]

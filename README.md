@@ -41,8 +41,8 @@ past = g.neighbours("query", types=[EdgeType.CONTRADICTS], recorded_before=query
 
 ## Rules for runs
 
-- GPU runs happen on the Z790 (RTX 4070, 12 GB). Record the model file,
-  quantisation and runtime version for every run.
+- GPU runs happen on the lab SLURM servers (since 2026-10-30; no longer the
+  Z790). Record the model file, quantisation and runtime version for every run.
 - Every results file records the code commit and the data split hash.
 - Fixed seeds; temperature 0 for LLM inference; three seeds for training.
 - Report negative results.
