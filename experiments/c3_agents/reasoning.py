@@ -43,7 +43,7 @@ MAX_STEPS = 8
 BIN = 10
 VIOLENT = {"gun", "knife", "fire", "fight", "crash", "injury", "distress", "threat"}
 # S3 v2 was developed on the dev set only (dev_set.py), in four attempts; "c" had the best dev F1
-# and is the one run on the test set. a, b: earlier attempts (see the change log); d: full flat view.
+# and is the one run on the test set. a, b: earlier attempts (described in the paper); d: full flat view.
 S3V2_VARIANTS = ("c", "d")
 MAX_QUESTIONS = 3
 MAX_STEPS_V2 = 12

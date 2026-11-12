@@ -1,6 +1,6 @@
 # c3_agents
 
-Design: see the matching page under "Experiment design notes C1 to C3 (2026-10-28)" in Notion (PhD Get Together). Code for this experiment goes here.
+Perception agents, edge builder, the four compared systems and the evaluation for the paper. The steps are listed under "Pipeline" below.
 
 ## Audio pre-check
 
@@ -38,5 +38,5 @@ label). The cluster copy of the graphs never contains `clips.csv`.
 All systems answer the question in `task.py` and are scored by P(Yes) on the first answer token.
 `frozen/` holds the evaluation set hash (`eval_set.json`, all 799 clips), the dev set used to
 develop S3 v2 (`dev_set.json`, 152 training clips, built by `dev_set.py`), the final scores and
-the cost per clip. S3 v2 was changed on the dev set only; the protocol and each attempt are in the
-design-notes change log.
+the cost per clip. S3 v2 was changed on the dev set only; the protocol and each attempt are
+described in the paper (development set section).
