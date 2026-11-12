@@ -1,0 +1,26 @@
+{
+ "clips": 799,
+ "nodes": {
+  "sound_event": 1476,
+  "transcript_segment": 10634,
+  "speech_tag": 1067,
+  "caption": 24808,
+  "detection": 13557
+ },
+ "nodes_total": 51542,
+ "nodes_median_per_clip": 46,
+ "edges": {
+  "same_event": 30530,
+  "supports": 14009,
+  "derived_from": 1067,
+  "contradicts": 16
+ },
+ "earlier_versions": {
+  "note": "measured on 2026-11-12 on the replaced versions (kept on disk: video_v1, speech_tags_v1)",
+  "contradicts_edges_caption_v1": 11188,
+  "caption_negation_share_v1": 0.906,
+  "speech_threat_tags_v1": 715
+ },
+ "caption_negation_share_v2": 0.059,
+ "speech_threat_tags_v2": 129
+}
