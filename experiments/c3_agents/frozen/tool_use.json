@@ -1,0 +1,38 @@
+{
+ "s3": {
+  "clips": 799,
+  "tool_calls": 1904,
+  "by_tool": {
+   "search": 1149,
+   "done": 796,
+   "window": 752,
+   "links": 3
+  },
+  "links_share": 0.0016
+ },
+ "s3v2": {
+  "clips": 799,
+  "tool_calls": 1084,
+  "by_tool": {
+   "event": 482,
+   "done": 799,
+   "window": 164,
+   "search": 413,
+   "invalid": 25
+  },
+  "links_share": 0.0
+ },
+ "s3_qwen36": {
+  "clips": 799,
+  "tool_calls": 4815,
+  "by_tool": {
+   "window": 3119,
+   "links": 1206,
+   "done": 504,
+   "search": 328,
+   "provenance": 144,
+   "invalid": 18
+  },
+  "links_share": 0.2505
+ }
+}
