@@ -85,3 +85,19 @@ def test_speech_nodes_drop_failed_segments():
     nodes = speech.speech_nodes(t)
     assert [n.content["text"] for n in nodes] == ["Get down!"]
     assert 0.7 < nodes[0].confidence < 0.75 and nodes[0].modality == Modality.SPEECH
+
+
+def test_video_nodes_bridge_short_gaps_and_keep_captions():
+    import video
+    rec = {"clip_id": "xabc", "detectors": {}, "vlm": "vl", "captions": [
+        {"start": 0, "end": 4, "text": "A man runs."}, {"start": 4, "end": 8, "text": ""}],
+        "detections": [{"t": 0, "object": "gun", "conf": 0.3}, {"t": 2, "object": "gun", "conf": 0.6},
+                       {"t": 9, "object": "gun", "conf": 0.2}, {"t": 2, "object": "person", "conf": 0.9},
+                       {"t": 2, "object": "person", "conf": 0.8}]}
+    nodes = video.video_nodes(rec)
+    guns = [n for n in nodes if n.content.get("object") == "gun"]
+    assert [n.t_obs for n in guns] == [(0.0, 3.0), (9.0, 10.0)]
+    assert guns[0].confidence == 0.6 and guns[0].content["peak_time"] == 2
+    person = next(n for n in nodes if n.content.get("object") == "person")
+    assert person.content["max_count"] == 2
+    assert [n.content["text"] for n in nodes if n.kind == "caption"] == ["A man runs."]
