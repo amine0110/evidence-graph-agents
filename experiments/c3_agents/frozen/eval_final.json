@@ -1,0 +1,2604 @@
+{
+ "runs": {
+  "s1": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9967,
+    "auc_ci": [
+     0.9936,
+     0.9992
+    ],
+    "ap": 0.9981,
+    "f1": 0.9678,
+    "precision": 0.943,
+    "recall": 0.994,
+    "f1_ci": [
+     0.956,
+     0.9777
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3206,
+    "frame_ap_1s": 0.5368,
+    "frame_ap": 0.5229,
+    "frame_ap_no_segments": 0.542,
+    "grounding_precision": 0.6454,
+    "grounding_recall": 0.5605,
+    "grounded_clips": 478,
+    "tokens_per_clip": 9394.9,
+    "seconds_per_clip": 6.25,
+    "cited_per_clip": 0.0
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9966,
+    "auc_ci": [
+     0.993,
+     0.9991
+    ],
+    "ap": 0.998,
+    "f1": 0.9675,
+    "precision": 0.9426,
+    "recall": 0.9937,
+    "f1_ci": [
+     0.9564,
+     0.9781
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1587,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3194,
+    "frame_ap_1s": 0.5405,
+    "grounding_precision": 0.6513,
+    "grounding_recall": 0.5583,
+    "grounded_clips": 459,
+    "tokens_per_clip": 9401.7,
+    "seconds_per_clip": 6.32,
+    "cited_per_clip": 0.0
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9942,
+    "f1": 0.9538,
+    "accuracy": 0.9381,
+    "grounding_precision": 0.7365,
+    "grounding_recall": 0.5221,
+    "grounded_clips": 61
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9979,
+    "f1": 0.9688,
+    "accuracy": 0.9588,
+    "grounding_precision": 0.6425,
+    "grounding_recall": 0.5387,
+    "grounded_clips": 60
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 0.9884,
+    "f1": 0.9552,
+    "accuracy": 0.9375,
+    "grounding_precision": 0.7828,
+    "grounding_recall": 0.5696,
+    "grounded_clips": 32
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 0.9884,
+    "f1": 0.9552,
+    "accuracy": 0.9375,
+    "grounding_precision": 0.688,
+    "grounding_recall": 0.5948,
+    "grounded_clips": 32
+   }
+  },
+  "s1_ts": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9969,
+    "auc_ci": [
+     0.9941,
+     0.9992
+    ],
+    "ap": 0.9982,
+    "f1": 0.9659,
+    "precision": 0.9394,
+    "recall": 0.994,
+    "f1_ci": [
+     0.9543,
+     0.9767
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3206,
+    "frame_ap_1s": 0.5921,
+    "frame_ap": 0.5729,
+    "frame_ap_no_segments": 0.5579,
+    "grounding_precision": 0.5514,
+    "grounding_recall": 0.8035,
+    "grounded_clips": 477,
+    "tokens_per_clip": 9097.3,
+    "seconds_per_clip": 3.89,
+    "cited_per_clip": 0.0
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9968,
+    "auc_ci": [
+     0.9936,
+     0.9991
+    ],
+    "ap": 0.9981,
+    "f1": 0.9655,
+    "precision": 0.9389,
+    "recall": 0.9937,
+    "f1_ci": [
+     0.9535,
+     0.9763
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1587,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3194,
+    "frame_ap_1s": 0.5954,
+    "grounding_precision": 0.5572,
+    "grounding_recall": 0.8028,
+    "grounded_clips": 458,
+    "tokens_per_clip": 9116.4,
+    "seconds_per_clip": 3.89,
+    "cited_per_clip": 0.0
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9974,
+    "f1": 0.9846,
+    "accuracy": 0.9794,
+    "grounding_precision": 0.6784,
+    "grounding_recall": 0.7363,
+    "grounded_clips": 64
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9974,
+    "f1": 0.9688,
+    "accuracy": 0.9588,
+    "grounding_precision": 0.5621,
+    "grounding_recall": 0.7638,
+    "grounded_clips": 61
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 0.9895,
+    "f1": 0.9552,
+    "accuracy": 0.9375,
+    "grounding_precision": 0.6912,
+    "grounding_recall": 0.7876,
+    "grounded_clips": 32
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 0.9895,
+    "f1": 0.9552,
+    "accuracy": 0.9375,
+    "grounding_precision": 0.5684,
+    "grounding_recall": 0.8018,
+    "grounded_clips": 32
+   }
+  },
+  "s2": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9407,
+    "auc_ci": [
+     0.9229,
+     0.9571
+    ],
+    "ap": 0.9481,
+    "f1": 0.9301,
+    "precision": 0.9264,
+    "recall": 0.9339,
+    "f1_ci": [
+     0.9128,
+     0.9462
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9875,
+    "triage10_recall": 0.1583,
+    "triage20_precision": 0.95,
+    "triage20_recall": 0.3046,
+    "frame_ap_1s": 0.5088,
+    "frame_ap": 0.4905,
+    "frame_ap_no_segments": 0.4693,
+    "grounding_precision": 0.6366,
+    "grounding_recall": 0.7172,
+    "grounded_clips": 453,
+    "tokens_per_clip": 8747.0,
+    "calls_per_clip": 6.9,
+    "seconds_per_clip": 103.21,
+    "cited_per_clip": 0.0
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.938,
+    "auc_ci": [
+     0.9187,
+     0.956
+    ],
+    "ap": 0.9461,
+    "f1": 0.9272,
+    "precision": 0.9234,
+    "recall": 0.9311,
+    "f1_ci": [
+     0.9097,
+     0.9433
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9605,
+    "triage10_recall": 0.1524,
+    "triage20_precision": 0.9739,
+    "triage20_recall": 0.3111,
+    "frame_ap_1s": 0.5119,
+    "grounding_precision": 0.6397,
+    "grounding_recall": 0.7103,
+    "grounded_clips": 434,
+    "tokens_per_clip": 8771.6,
+    "calls_per_clip": 6.9,
+    "seconds_per_clip": 103.39,
+    "cited_per_clip": 0.0
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.925,
+    "f1": 0.9134,
+    "accuracy": 0.8866,
+    "grounding_precision": 0.7366,
+    "grounding_recall": 0.6912,
+    "grounded_clips": 58
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.943,
+    "f1": 0.928,
+    "accuracy": 0.9072,
+    "grounding_precision": 0.5945,
+    "grounding_recall": 0.7044,
+    "grounded_clips": 57
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.7565,
+    "grounding_recall": 0.6309,
+    "grounded_clips": 34
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.625,
+    "grounding_recall": 0.6458,
+    "grounded_clips": 34
+   }
+  },
+  "s3": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9511,
+    "auc_ci": [
+     0.9342,
+     0.9655
+    ],
+    "ap": 0.9556,
+    "f1": 0.935,
+    "precision": 0.9485,
+    "recall": 0.9218,
+    "f1_ci": [
+     0.9173,
+     0.9504
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9875,
+    "triage10_recall": 0.1583,
+    "triage20_precision": 0.9625,
+    "triage20_recall": 0.3086,
+    "frame_ap_1s": 0.4618,
+    "frame_ap": 0.4434,
+    "frame_ap_no_segments": 0.4669,
+    "grounding_precision": 0.6516,
+    "grounding_recall": 0.6778,
+    "grounded_clips": 447,
+    "tokens_per_clip": 6634.0,
+    "calls_per_clip": 4.38,
+    "seconds_per_clip": 37.32,
+    "cited_per_clip": 5.23
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9509,
+    "auc_ci": [
+     0.9336,
+     0.9664
+    ],
+    "ap": 0.9561,
+    "f1": 0.9342,
+    "precision": 0.9503,
+    "recall": 0.9186,
+    "f1_ci": [
+     0.9169,
+     0.9495
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9474,
+    "triage10_recall": 0.1503,
+    "triage20_precision": 0.9739,
+    "triage20_recall": 0.3111,
+    "frame_ap_1s": 0.4641,
+    "grounding_precision": 0.6527,
+    "grounding_recall": 0.6752,
+    "grounded_clips": 428,
+    "tokens_per_clip": 6650.1,
+    "calls_per_clip": 4.39,
+    "seconds_per_clip": 37.36,
+    "cited_per_clip": 5.29
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9755,
+    "f1": 0.9516,
+    "accuracy": 0.9381,
+    "grounding_precision": 0.7315,
+    "grounding_recall": 0.6612,
+    "grounded_clips": 59
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9827,
+    "f1": 0.9672,
+    "accuracy": 0.9588,
+    "grounding_precision": 0.584,
+    "grounding_recall": 0.6898,
+    "grounded_clips": 58
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.738,
+    "grounding_recall": 0.6107,
+    "grounded_clips": 34
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.5953,
+    "grounding_recall": 0.639,
+    "grounded_clips": 34
+   }
+  },
+  "s3v2": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9601,
+    "auc_ci": [
+     0.9464,
+     0.9717
+    ],
+    "ap": 0.9685,
+    "f1": 0.9243,
+    "precision": 0.9436,
+    "recall": 0.9058,
+    "f1_ci": [
+     0.9065,
+     0.9407
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 0.9875,
+    "triage20_recall": 0.3166,
+    "frame_ap_1s": 0.5639,
+    "frame_ap": 0.543,
+    "frame_ap_no_segments": 0.4799,
+    "grounding_precision": 0.6577,
+    "grounding_recall": 0.7622,
+    "grounded_clips": 440,
+    "tokens_per_clip": 9573.6,
+    "calls_per_clip": 3.36,
+    "seconds_per_clip": 15.27,
+    "cited_per_clip": 5.74
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9588,
+    "auc_ci": [
+     0.9434,
+     0.9714
+    ],
+    "ap": 0.9675,
+    "f1": 0.9231,
+    "precision": 0.9453,
+    "recall": 0.9019,
+    "f1_ci": [
+     0.9048,
+     0.9407
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9868,
+    "triage10_recall": 0.1566,
+    "triage20_precision": 0.9869,
+    "triage20_recall": 0.3152,
+    "frame_ap_1s": 0.5654,
+    "grounding_precision": 0.6578,
+    "grounding_recall": 0.7577,
+    "grounded_clips": 421,
+    "tokens_per_clip": 9609.5,
+    "calls_per_clip": 3.36,
+    "seconds_per_clip": 15.35,
+    "cited_per_clip": 5.83
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9553,
+    "f1": 0.9365,
+    "accuracy": 0.9175,
+    "grounding_precision": 0.7683,
+    "grounding_recall": 0.6612,
+    "grounded_clips": 59
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9552,
+    "f1": 0.9516,
+    "accuracy": 0.9381,
+    "grounding_precision": 0.62,
+    "grounding_recall": 0.6972,
+    "grounded_clips": 58
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 0.9697,
+    "accuracy": 0.9583,
+    "grounding_precision": 0.7414,
+    "grounding_recall": 0.7033,
+    "grounded_clips": 32
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 0.9697,
+    "accuracy": 0.9583,
+    "grounding_precision": 0.609,
+    "grounding_recall": 0.7222,
+    "grounded_clips": 32
+   }
+  },
+  "s4": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9917,
+    "auc_ci": [
+     0.9865,
+     0.9959
+    ],
+    "ap": 0.9951,
+    "f1": 0.9672,
+    "precision": 0.9587,
+    "recall": 0.976,
+    "f1_ci": [
+     0.9561,
+     0.9778
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3206,
+    "frame_ap_1s": 0.5602,
+    "frame_ap": 0.5383,
+    "frame_ap_no_segments": 0.5353,
+    "grounding_precision": 0.6272,
+    "grounding_recall": 0.7736,
+    "grounded_clips": 473,
+    "tokens_per_clip": 3255.0,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 26.91,
+    "cited_per_clip": 6.85
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9914,
+    "auc_ci": [
+     0.986,
+     0.9957
+    ],
+    "ap": 0.995,
+    "f1": 0.9669,
+    "precision": 0.9589,
+    "recall": 0.9749,
+    "f1_ci": [
+     0.9543,
+     0.9774
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1587,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3194,
+    "frame_ap_1s": 0.5634,
+    "grounding_precision": 0.6294,
+    "grounding_recall": 0.7714,
+    "grounded_clips": 454,
+    "tokens_per_clip": 3279.6,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 26.95,
+    "cited_per_clip": 6.96
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9976,
+    "f1": 0.9606,
+    "accuracy": 0.9485,
+    "grounding_precision": 0.759,
+    "grounding_recall": 0.7165,
+    "grounded_clips": 61
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9986,
+    "f1": 0.976,
+    "accuracy": 0.9691,
+    "grounding_precision": 0.6193,
+    "grounding_recall": 0.7561,
+    "grounded_clips": 60
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.7742,
+    "grounding_recall": 0.6967,
+    "grounded_clips": 34
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.6274,
+    "grounding_recall": 0.7021,
+    "grounded_clips": 34
+   }
+  },
+  "s3_no_edges": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9469,
+    "auc_ci": [
+     0.929,
+     0.9626
+    ],
+    "ap": 0.95,
+    "f1": 0.9301,
+    "precision": 0.9406,
+    "recall": 0.9198,
+    "f1_ci": [
+     0.9113,
+     0.9461
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9875,
+    "triage10_recall": 0.1583,
+    "triage20_precision": 0.9563,
+    "triage20_recall": 0.3066,
+    "frame_ap_1s": 0.4597,
+    "frame_ap": 0.4415,
+    "frame_ap_no_segments": 0.462,
+    "grounding_precision": 0.6533,
+    "grounding_recall": 0.6838,
+    "grounded_clips": 446,
+    "tokens_per_clip": 6623.3,
+    "calls_per_clip": 4.39,
+    "seconds_per_clip": 37.14,
+    "cited_per_clip": 5.29
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9465,
+    "auc_ci": [
+     0.9278,
+     0.9629
+    ],
+    "ap": 0.9502,
+    "f1": 0.9291,
+    "precision": 0.9421,
+    "recall": 0.9165,
+    "f1_ci": [
+     0.911,
+     0.9452
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9342,
+    "triage10_recall": 0.1482,
+    "triage20_precision": 0.9673,
+    "triage20_recall": 0.309,
+    "frame_ap_1s": 0.4622,
+    "grounding_precision": 0.6537,
+    "grounding_recall": 0.6824,
+    "grounded_clips": 427,
+    "tokens_per_clip": 6654.9,
+    "calls_per_clip": 4.4,
+    "seconds_per_clip": 37.24,
+    "cited_per_clip": 5.36
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9748,
+    "f1": 0.9516,
+    "accuracy": 0.9381,
+    "grounding_precision": 0.7225,
+    "grounding_recall": 0.6619,
+    "grounded_clips": 59
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9648,
+    "f1": 0.9508,
+    "accuracy": 0.9381,
+    "grounding_precision": 0.5784,
+    "grounding_recall": 0.6854,
+    "grounded_clips": 57
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 0.9851,
+    "accuracy": 0.9792,
+    "grounding_precision": 0.7337,
+    "grounding_recall": 0.6146,
+    "grounded_clips": 33
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 0.9851,
+    "accuracy": 0.9792,
+    "grounding_precision": 0.5778,
+    "grounding_recall": 0.6384,
+    "grounded_clips": 33
+   }
+  },
+  "s3_no_conf": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9417,
+    "auc_ci": [
+     0.9237,
+     0.958
+    ],
+    "ap": 0.9497,
+    "f1": 0.9251,
+    "precision": 0.9223,
+    "recall": 0.9279,
+    "f1_ci": [
+     0.9059,
+     0.9411
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.975,
+    "triage10_recall": 0.1563,
+    "triage20_precision": 0.9625,
+    "triage20_recall": 0.3086,
+    "frame_ap_1s": 0.4642,
+    "frame_ap": 0.4433,
+    "frame_ap_no_segments": 0.4422,
+    "grounding_precision": 0.6152,
+    "grounding_recall": 0.7301,
+    "grounded_clips": 449,
+    "tokens_per_clip": 6131.2,
+    "calls_per_clip": 4.38,
+    "seconds_per_clip": 33.98,
+    "cited_per_clip": 6.12
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9407,
+    "auc_ci": [
+     0.9234,
+     0.9575
+    ],
+    "ap": 0.9497,
+    "f1": 0.9229,
+    "precision": 0.921,
+    "recall": 0.9248,
+    "f1_ci": [
+     0.9044,
+     0.94
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9474,
+    "triage10_recall": 0.1503,
+    "triage20_precision": 0.9608,
+    "triage20_recall": 0.3069,
+    "frame_ap_1s": 0.4659,
+    "grounding_precision": 0.6164,
+    "grounding_recall": 0.7256,
+    "grounded_clips": 430,
+    "tokens_per_clip": 6169.3,
+    "calls_per_clip": 4.4,
+    "seconds_per_clip": 34.12,
+    "cited_per_clip": 6.23
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9637,
+    "f1": 0.9375,
+    "accuracy": 0.9175,
+    "grounding_precision": 0.7155,
+    "grounding_recall": 0.7388,
+    "grounded_clips": 60
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9685,
+    "f1": 0.9524,
+    "accuracy": 0.9381,
+    "grounding_precision": 0.5746,
+    "grounding_recall": 0.7621,
+    "grounded_clips": 59
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 0.9622,
+    "f1": 0.9714,
+    "accuracy": 0.9583,
+    "grounding_precision": 0.7155,
+    "grounding_recall": 0.6979,
+    "grounded_clips": 34
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 0.9622,
+    "f1": 0.9714,
+    "accuracy": 0.9583,
+    "grounding_precision": 0.6019,
+    "grounding_recall": 0.7396,
+    "grounded_clips": 34
+   }
+  },
+  "s3_no_audio": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9416,
+    "auc_ci": [
+     0.9232,
+     0.9577
+    ],
+    "ap": 0.9471,
+    "f1": 0.9221,
+    "precision": 0.9434,
+    "recall": 0.9018,
+    "f1_ci": [
+     0.9028,
+     0.939
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9875,
+    "triage10_recall": 0.1583,
+    "triage20_precision": 0.9625,
+    "triage20_recall": 0.3086,
+    "frame_ap_1s": 0.4407,
+    "frame_ap": 0.4224,
+    "frame_ap_no_segments": 0.4707,
+    "grounding_precision": 0.6745,
+    "grounding_recall": 0.5936,
+    "grounded_clips": 437,
+    "tokens_per_clip": 6670.5,
+    "calls_per_clip": 4.47,
+    "seconds_per_clip": 37.15,
+    "cited_per_clip": 4.63
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9409,
+    "auc_ci": [
+     0.9216,
+     0.9581
+    ],
+    "ap": 0.9472,
+    "f1": 0.9208,
+    "precision": 0.9451,
+    "recall": 0.8977,
+    "f1_ci": [
+     0.9027,
+     0.9376
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9474,
+    "triage10_recall": 0.1503,
+    "triage20_precision": 0.9739,
+    "triage20_recall": 0.3111,
+    "frame_ap_1s": 0.4428,
+    "grounding_precision": 0.6755,
+    "grounding_recall": 0.5876,
+    "grounded_clips": 418,
+    "tokens_per_clip": 6680.9,
+    "calls_per_clip": 4.48,
+    "seconds_per_clip": 37.18,
+    "cited_per_clip": 4.68
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9668,
+    "f1": 0.9256,
+    "accuracy": 0.9072,
+    "grounding_precision": 0.7503,
+    "grounding_recall": 0.5324,
+    "grounded_clips": 56
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9727,
+    "f1": 0.9412,
+    "accuracy": 0.9278,
+    "grounding_precision": 0.6296,
+    "grounding_recall": 0.566,
+    "grounded_clips": 55
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.7523,
+    "grounding_recall": 0.5567,
+    "grounded_clips": 34
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.6282,
+    "grounding_recall": 0.5693,
+    "grounded_clips": 34
+   }
+  },
+  "s3_no_speech": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9535,
+    "auc_ci": [
+     0.9374,
+     0.9678
+    ],
+    "ap": 0.9611,
+    "f1": 0.9307,
+    "precision": 0.9615,
+    "recall": 0.9018,
+    "f1_ci": [
+     0.913,
+     0.9461
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.975,
+    "triage10_recall": 0.1563,
+    "triage20_precision": 0.975,
+    "triage20_recall": 0.3126,
+    "frame_ap_1s": 0.4382,
+    "frame_ap": 0.418,
+    "frame_ap_no_segments": 0.4728,
+    "grounding_precision": 0.6605,
+    "grounding_recall": 0.6478,
+    "grounded_clips": 437,
+    "tokens_per_clip": 6528.9,
+    "calls_per_clip": 4.37,
+    "seconds_per_clip": 36.27,
+    "cited_per_clip": 4.75
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9534,
+    "auc_ci": [
+     0.937,
+     0.9677
+    ],
+    "ap": 0.9619,
+    "f1": 0.9297,
+    "precision": 0.9641,
+    "recall": 0.8977,
+    "f1_ci": [
+     0.9117,
+     0.9463
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9737,
+    "triage10_recall": 0.1545,
+    "triage20_precision": 0.9869,
+    "triage20_recall": 0.3152,
+    "frame_ap_1s": 0.4404,
+    "grounding_precision": 0.6611,
+    "grounding_recall": 0.6443,
+    "grounded_clips": 418,
+    "tokens_per_clip": 6540.6,
+    "calls_per_clip": 4.38,
+    "seconds_per_clip": 36.32,
+    "cited_per_clip": 4.79
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9719,
+    "f1": 0.9256,
+    "accuracy": 0.9072,
+    "grounding_precision": 0.7589,
+    "grounding_recall": 0.6126,
+    "grounded_clips": 56
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9804,
+    "f1": 0.9412,
+    "accuracy": 0.9278,
+    "grounding_precision": 0.6277,
+    "grounding_recall": 0.6415,
+    "grounded_clips": 55
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 0.9811,
+    "f1": 0.9697,
+    "accuracy": 0.9583,
+    "grounding_precision": 0.7561,
+    "grounding_recall": 0.6104,
+    "grounded_clips": 32
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 0.9811,
+    "f1": 0.9697,
+    "accuracy": 0.9583,
+    "grounding_precision": 0.6457,
+    "grounding_recall": 0.6438,
+    "grounded_clips": 32
+   }
+  },
+  "s3_qwen36": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9791,
+    "auc_ci": [
+     0.9702,
+     0.9865
+    ],
+    "ap": 0.9864,
+    "f1": 0.9389,
+    "precision": 0.938,
+    "recall": 0.9399,
+    "f1_ci": [
+     0.9229,
+     0.9529
+    ],
+    "unparsed": 6,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3206,
+    "frame_ap_1s": 0.5051,
+    "frame_ap": 0.4884,
+    "frame_ap_no_segments": 0.5595,
+    "grounding_precision": 0.669,
+    "grounding_recall": 0.6412,
+    "grounded_clips": 456,
+    "tokens_per_clip": 17873.7,
+    "calls_per_clip": 7.66,
+    "seconds_per_clip": 18.36,
+    "cited_per_clip": 6.59
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9787,
+    "auc_ci": [
+     0.9693,
+     0.9865
+    ],
+    "ap": 0.9863,
+    "f1": 0.9374,
+    "precision": 0.9374,
+    "recall": 0.9374,
+    "f1_ci": [
+     0.9207,
+     0.9525
+    ],
+    "unparsed": 6,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1587,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3194,
+    "frame_ap_1s": 0.5077,
+    "grounding_precision": 0.6696,
+    "grounding_recall": 0.6423,
+    "grounded_clips": 437,
+    "tokens_per_clip": 18050.2,
+    "calls_per_clip": 7.67,
+    "seconds_per_clip": 18.44,
+    "cited_per_clip": 6.69
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9856,
+    "f1": 0.9449,
+    "accuracy": 0.9278,
+    "grounding_precision": 0.7718,
+    "grounding_recall": 0.5879,
+    "grounded_clips": 60
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9911,
+    "f1": 0.944,
+    "accuracy": 0.9278,
+    "grounding_precision": 0.6233,
+    "grounding_recall": 0.6462,
+    "grounded_clips": 58
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 0.9855,
+    "accuracy": 0.9792,
+    "grounding_precision": 0.7643,
+    "grounding_recall": 0.6212,
+    "grounded_clips": 34
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 0.9855,
+    "accuracy": 0.9792,
+    "grounding_precision": 0.634,
+    "grounding_recall": 0.6411,
+    "grounded_clips": 34
+   }
+  },
+  "s3v2_no_edges": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9586,
+    "auc_ci": [
+     0.9433,
+     0.9714
+    ],
+    "ap": 0.963,
+    "f1": 0.9371,
+    "precision": 0.9487,
+    "recall": 0.9259,
+    "f1_ci": [
+     0.9215,
+     0.9516
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 0.975,
+    "triage20_recall": 0.3126,
+    "frame_ap_1s": 0.5533,
+    "frame_ap": 0.5336,
+    "frame_ap_no_segments": 0.4729,
+    "grounding_precision": 0.6804,
+    "grounding_recall": 0.7103,
+    "grounded_clips": 449,
+    "tokens_per_clip": 11075.6,
+    "calls_per_clip": 4.16,
+    "seconds_per_clip": 16.03,
+    "cited_per_clip": 5.18
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9584,
+    "auc_ci": [
+     0.9433,
+     0.9721
+    ],
+    "ap": 0.9638,
+    "f1": 0.9354,
+    "precision": 0.9485,
+    "recall": 0.9228,
+    "f1_ci": [
+     0.9187,
+     0.9514
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9605,
+    "triage10_recall": 0.1524,
+    "triage20_precision": 0.9804,
+    "triage20_recall": 0.3132,
+    "frame_ap_1s": 0.5549,
+    "grounding_precision": 0.6822,
+    "grounding_recall": 0.7034,
+    "grounded_clips": 430,
+    "tokens_per_clip": 11093.8,
+    "calls_per_clip": 4.16,
+    "seconds_per_clip": 16.16,
+    "cited_per_clip": 5.24
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9716,
+    "f1": 0.9531,
+    "accuracy": 0.9381,
+    "grounding_precision": 0.7634,
+    "grounding_recall": 0.6505,
+    "grounded_clips": 61
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9734,
+    "f1": 0.9683,
+    "accuracy": 0.9588,
+    "grounding_precision": 0.625,
+    "grounding_recall": 0.6925,
+    "grounded_clips": 60
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 0.9979,
+    "f1": 0.9851,
+    "accuracy": 0.9792,
+    "grounding_precision": 0.7758,
+    "grounding_recall": 0.6534,
+    "grounded_clips": 33
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 0.9979,
+    "f1": 0.9851,
+    "accuracy": 0.9792,
+    "grounding_precision": 0.6421,
+    "grounding_recall": 0.6733,
+    "grounded_clips": 33
+   }
+  },
+  "s3v2_no_audio": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9512,
+    "auc_ci": [
+     0.9355,
+     0.9651
+    ],
+    "ap": 0.9599,
+    "f1": 0.9275,
+    "precision": 0.9458,
+    "recall": 0.9098,
+    "f1_ci": [
+     0.9104,
+     0.9439
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 0.9812,
+    "triage20_recall": 0.3146,
+    "frame_ap_1s": 0.5571,
+    "frame_ap": 0.5385,
+    "frame_ap_no_segments": 0.4794,
+    "grounding_precision": 0.685,
+    "grounding_recall": 0.6954,
+    "grounded_clips": 442,
+    "tokens_per_clip": 9586.2,
+    "calls_per_clip": 3.6,
+    "seconds_per_clip": 15.29,
+    "cited_per_clip": 5.07
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9494,
+    "auc_ci": [
+     0.9326,
+     0.9643
+    ],
+    "ap": 0.9585,
+    "f1": 0.9254,
+    "precision": 0.9455,
+    "recall": 0.9061,
+    "f1_ci": [
+     0.9071,
+     0.9421
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9737,
+    "triage10_recall": 0.1545,
+    "triage20_precision": 0.9869,
+    "triage20_recall": 0.3152,
+    "frame_ap_1s": 0.5586,
+    "grounding_precision": 0.6857,
+    "grounding_recall": 0.6878,
+    "grounded_clips": 423,
+    "tokens_per_clip": 9613.4,
+    "calls_per_clip": 3.59,
+    "seconds_per_clip": 15.38,
+    "cited_per_clip": 5.13
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9341,
+    "f1": 0.928,
+    "accuracy": 0.9072,
+    "grounding_precision": 0.7646,
+    "grounding_recall": 0.6184,
+    "grounded_clips": 58
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9414,
+    "f1": 0.9431,
+    "accuracy": 0.9278,
+    "grounding_precision": 0.6349,
+    "grounding_recall": 0.6486,
+    "grounded_clips": 57
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 0.9697,
+    "accuracy": 0.9583,
+    "grounding_precision": 0.7705,
+    "grounding_recall": 0.6618,
+    "grounded_clips": 32
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 0.9697,
+    "accuracy": 0.9583,
+    "grounding_precision": 0.6433,
+    "grounding_recall": 0.6654,
+    "grounded_clips": 32
+   }
+  },
+  "s4_no_audio": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9867,
+    "auc_ci": [
+     0.98,
+     0.9925
+    ],
+    "ap": 0.9921,
+    "f1": 0.9556,
+    "precision": 0.9633,
+    "recall": 0.9479,
+    "f1_ci": [
+     0.9425,
+     0.9687
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3206,
+    "frame_ap_1s": 0.5858,
+    "frame_ap": 0.5677,
+    "frame_ap_no_segments": 0.5472,
+    "grounding_precision": 0.6896,
+    "grounding_recall": 0.7208,
+    "grounded_clips": 460,
+    "tokens_per_clip": 3198.2,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 25.97,
+    "cited_per_clip": 5.91
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9862,
+    "auc_ci": [
+     0.9791,
+     0.9925
+    ],
+    "ap": 0.9919,
+    "f1": 0.9547,
+    "precision": 0.9638,
+    "recall": 0.9457,
+    "f1_ci": [
+     0.9399,
+     0.9673
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1587,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3194,
+    "frame_ap_1s": 0.5885,
+    "grounding_precision": 0.6906,
+    "grounding_recall": 0.7167,
+    "grounded_clips": 441,
+    "tokens_per_clip": 3222.4,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 26.01,
+    "cited_per_clip": 6.01
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9793,
+    "f1": 0.9268,
+    "accuracy": 0.9072,
+    "grounding_precision": 0.7766,
+    "grounding_recall": 0.6326,
+    "grounded_clips": 57
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9879,
+    "f1": 0.9421,
+    "accuracy": 0.9278,
+    "grounding_precision": 0.6599,
+    "grounding_recall": 0.6897,
+    "grounded_clips": 56
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.7979,
+    "grounding_recall": 0.6695,
+    "grounded_clips": 34
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.6681,
+    "grounding_recall": 0.7036,
+    "grounded_clips": 34
+   }
+  },
+  "s4_no_speech": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9905,
+    "auc_ci": [
+     0.985,
+     0.995
+    ],
+    "ap": 0.9944,
+    "f1": 0.9625,
+    "precision": 0.9493,
+    "recall": 0.976,
+    "f1_ci": [
+     0.9498,
+     0.9742
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3206,
+    "frame_ap_1s": 0.5548,
+    "frame_ap": 0.5332,
+    "frame_ap_no_segments": 0.5194,
+    "grounding_precision": 0.6389,
+    "grounding_recall": 0.7671,
+    "grounded_clips": 473,
+    "tokens_per_clip": 2700.1,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 22.03,
+    "cited_per_clip": 6.14
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9902,
+    "auc_ci": [
+     0.9843,
+     0.9949
+    ],
+    "ap": 0.9942,
+    "f1": 0.9619,
+    "precision": 0.9492,
+    "recall": 0.9749,
+    "f1_ci": [
+     0.9485,
+     0.9738
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1587,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3194,
+    "frame_ap_1s": 0.5576,
+    "grounding_precision": 0.6415,
+    "grounding_recall": 0.7647,
+    "grounded_clips": 454,
+    "tokens_per_clip": 2700.2,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 22.04,
+    "cited_per_clip": 6.23
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9892,
+    "f1": 0.9688,
+    "accuracy": 0.9588,
+    "grounding_precision": 0.7696,
+    "grounding_recall": 0.6596,
+    "grounded_clips": 62
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9995,
+    "f1": 0.9841,
+    "accuracy": 0.9794,
+    "grounding_precision": 0.6356,
+    "grounding_recall": 0.7288,
+    "grounded_clips": 61
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.7628,
+    "grounding_recall": 0.6657,
+    "grounded_clips": 34
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.6295,
+    "grounding_recall": 0.6975,
+    "grounded_clips": 34
+   }
+  },
+  "s4_no_audio_speech": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9831,
+    "auc_ci": [
+     0.9751,
+     0.9899
+    ],
+    "ap": 0.9898,
+    "f1": 0.9508,
+    "precision": 0.9536,
+    "recall": 0.9479,
+    "f1_ci": [
+     0.9362,
+     0.9641
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3206,
+    "frame_ap_1s": 0.5599,
+    "frame_ap": 0.5407,
+    "frame_ap_no_segments": 0.5251,
+    "grounding_precision": 0.6982,
+    "grounding_recall": 0.6944,
+    "grounded_clips": 460,
+    "tokens_per_clip": 2643.3,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 21.18,
+    "cited_per_clip": 5.3
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9825,
+    "auc_ci": [
+     0.974,
+     0.9901
+    ],
+    "ap": 0.9895,
+    "f1": 0.9497,
+    "precision": 0.9537,
+    "recall": 0.9457,
+    "f1_ci": [
+     0.934,
+     0.9627
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1587,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3194,
+    "frame_ap_1s": 0.5624,
+    "grounding_precision": 0.6997,
+    "grounding_recall": 0.6904,
+    "grounded_clips": 441,
+    "tokens_per_clip": 2643.0,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 21.19,
+    "cited_per_clip": 5.42
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9577,
+    "f1": 0.9355,
+    "accuracy": 0.9175,
+    "grounding_precision": 0.7655,
+    "grounding_recall": 0.5786,
+    "grounded_clips": 58
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9776,
+    "f1": 0.9508,
+    "accuracy": 0.9381,
+    "grounding_precision": 0.6479,
+    "grounding_recall": 0.6214,
+    "grounded_clips": 57
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.7608,
+    "grounding_recall": 0.6118,
+    "grounded_clips": 34
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.634,
+    "grounding_recall": 0.6339,
+    "grounded_clips": 34
+   }
+  },
+  "s3_c": {
+   "all": {
+    "clips": 799,
+    "auc": 0.8464,
+    "auc_ci": [
+     0.8242,
+     0.8687
+    ],
+    "ap": 0.8954,
+    "f1": 0.6841,
+    "precision": 0.9886,
+    "recall": 0.523,
+    "f1_ci": [
+     0.6453,
+     0.7198
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3206,
+    "frame_ap_1s": 0.4626,
+    "frame_ap": 0.4502,
+    "frame_ap_no_segments": 0.5588,
+    "grounding_precision": 0.6479,
+    "grounding_recall": 0.4622,
+    "grounded_clips": 252,
+    "tokens_per_clip": 6957.8,
+    "calls_per_clip": 4.89,
+    "seconds_per_clip": 37.41,
+    "cited_per_clip": 2.5
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.8491,
+    "auc_ci": [
+     0.8266,
+     0.8725
+    ],
+    "ap": 0.8979,
+    "f1": 0.6866,
+    "precision": 0.9882,
+    "recall": 0.5261,
+    "f1_ci": [
+     0.647,
+     0.7245
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1587,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3194,
+    "frame_ap_1s": 0.4683,
+    "grounding_precision": 0.6511,
+    "grounding_recall": 0.4603,
+    "grounded_clips": 243,
+    "tokens_per_clip": 7002.6,
+    "calls_per_clip": 4.9,
+    "seconds_per_clip": 37.48,
+    "cited_per_clip": 2.55
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.8615,
+    "f1": 0.587,
+    "accuracy": 0.6082,
+    "grounding_precision": 0.7499,
+    "grounding_recall": 0.41,
+    "grounded_clips": 27
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.8581,
+    "f1": 0.6,
+    "accuracy": 0.6289,
+    "grounding_precision": 0.6425,
+    "grounding_recall": 0.4086,
+    "grounded_clips": 26
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 0.8519,
+    "f1": 0.64,
+    "accuracy": 0.625,
+    "grounding_precision": 0.7546,
+    "grounding_recall": 0.3902,
+    "grounded_clips": 16
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 0.8519,
+    "f1": 0.64,
+    "accuracy": 0.625,
+    "grounding_precision": 0.5702,
+    "grounding_recall": 0.3857,
+    "grounded_clips": 16
+   }
+  },
+  "s3_r": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9547,
+    "auc_ci": [
+     0.939,
+     0.9683
+    ],
+    "ap": 0.9613,
+    "f1": 0.9253,
+    "precision": 0.9456,
+    "recall": 0.9058,
+    "f1_ci": [
+     0.907,
+     0.9421
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 0.975,
+    "triage20_recall": 0.3126,
+    "frame_ap_1s": 0.4729,
+    "frame_ap": 0.4541,
+    "frame_ap_no_segments": 0.4798,
+    "grounding_precision": 0.6487,
+    "grounding_recall": 0.6657,
+    "grounded_clips": 439,
+    "tokens_per_clip": 6489.5,
+    "calls_per_clip": 4.37,
+    "seconds_per_clip": 36.29,
+    "cited_per_clip": 4.89
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9546,
+    "auc_ci": [
+     0.9383,
+     0.9697
+    ],
+    "ap": 0.962,
+    "f1": 0.9241,
+    "precision": 0.9474,
+    "recall": 0.9019,
+    "f1_ci": [
+     0.9051,
+     0.9413
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9605,
+    "triage10_recall": 0.1524,
+    "triage20_precision": 0.9804,
+    "triage20_recall": 0.3132,
+    "frame_ap_1s": 0.4751,
+    "grounding_precision": 0.6501,
+    "grounding_recall": 0.6599,
+    "grounded_clips": 420,
+    "tokens_per_clip": 6514.4,
+    "calls_per_clip": 4.37,
+    "seconds_per_clip": 36.32,
+    "cited_per_clip": 4.94
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9748,
+    "f1": 0.9516,
+    "accuracy": 0.9381,
+    "grounding_precision": 0.7234,
+    "grounding_recall": 0.6558,
+    "grounded_clips": 59
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9823,
+    "f1": 0.9672,
+    "accuracy": 0.9588,
+    "grounding_precision": 0.5957,
+    "grounding_recall": 0.6746,
+    "grounded_clips": 58
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.7268,
+    "grounding_recall": 0.5976,
+    "grounded_clips": 34
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.5712,
+    "grounding_recall": 0.5856,
+    "grounded_clips": 34
+   }
+  },
+  "s3v2_c": {
+   "all": {
+    "clips": 799,
+    "auc": 0.8302,
+    "auc_ci": [
+     0.8047,
+     0.8535
+    ],
+    "ap": 0.8794,
+    "f1": 0.6008,
+    "precision": 0.9818,
+    "recall": 0.4329,
+    "f1_ci": [
+     0.5541,
+     0.643
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 0.9938,
+    "triage20_recall": 0.3186,
+    "frame_ap_1s": 0.4229,
+    "frame_ap": 0.4103,
+    "frame_ap_no_segments": 0.525,
+    "grounding_precision": 0.5915,
+    "grounding_recall": 0.2975,
+    "grounded_clips": 211,
+    "tokens_per_clip": 12963.2,
+    "calls_per_clip": 5.3,
+    "seconds_per_clip": 14.86,
+    "cited_per_clip": 1.69
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.8331,
+    "auc_ci": [
+     0.8085,
+     0.8576
+    ],
+    "ap": 0.8819,
+    "f1": 0.602,
+    "precision": 0.9811,
+    "recall": 0.4342,
+    "f1_ci": [
+     0.5586,
+     0.6421
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1587,
+    "triage20_precision": 0.9935,
+    "triage20_recall": 0.3173,
+    "frame_ap_1s": 0.4278,
+    "grounding_precision": 0.5896,
+    "grounding_recall": 0.2957,
+    "grounded_clips": 204,
+    "tokens_per_clip": 13018.7,
+    "calls_per_clip": 5.34,
+    "seconds_per_clip": 15.04,
+    "cited_per_clip": 1.72
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.8875,
+    "f1": 0.6735,
+    "accuracy": 0.6701,
+    "grounding_precision": 0.7243,
+    "grounding_recall": 0.335,
+    "grounded_clips": 33
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.873,
+    "f1": 0.6875,
+    "accuracy": 0.6907,
+    "grounding_precision": 0.5951,
+    "grounding_recall": 0.3328,
+    "grounded_clips": 32
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 0.8739,
+    "f1": 0.6923,
+    "accuracy": 0.6667,
+    "grounding_precision": 0.6292,
+    "grounding_recall": 0.2485,
+    "grounded_clips": 18
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 0.8739,
+    "f1": 0.6923,
+    "accuracy": 0.6667,
+    "grounding_precision": 0.5724,
+    "grounding_recall": 0.2732,
+    "grounded_clips": 18
+   }
+  },
+  "s3v2_r": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9581,
+    "auc_ci": [
+     0.9437,
+     0.9708
+    ],
+    "ap": 0.966,
+    "f1": 0.9272,
+    "precision": 0.9496,
+    "recall": 0.9058,
+    "f1_ci": [
+     0.9091,
+     0.9432
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 0.9812,
+    "triage20_recall": 0.3146,
+    "frame_ap_1s": 0.5551,
+    "frame_ap": 0.534,
+    "frame_ap_no_segments": 0.4734,
+    "grounding_precision": 0.6547,
+    "grounding_recall": 0.7592,
+    "grounded_clips": 440,
+    "tokens_per_clip": 9535.5,
+    "calls_per_clip": 3.54,
+    "seconds_per_clip": 14.61,
+    "cited_per_clip": 5.66
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9567,
+    "auc_ci": [
+     0.9411,
+     0.97
+    ],
+    "ap": 0.9649,
+    "f1": 0.926,
+    "precision": 0.9515,
+    "recall": 0.9019,
+    "f1_ci": [
+     0.9075,
+     0.9424
+    ],
+    "unparsed": 0,
+    "triage10_precision": 0.9868,
+    "triage10_recall": 0.1566,
+    "triage20_precision": 0.9935,
+    "triage20_recall": 0.3173,
+    "frame_ap_1s": 0.5565,
+    "grounding_precision": 0.6555,
+    "grounding_recall": 0.7561,
+    "grounded_clips": 421,
+    "tokens_per_clip": 9581.6,
+    "calls_per_clip": 3.55,
+    "seconds_per_clip": 14.75,
+    "cited_per_clip": 5.77
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9731,
+    "f1": 0.944,
+    "accuracy": 0.9278,
+    "grounding_precision": 0.7425,
+    "grounding_recall": 0.6907,
+    "grounded_clips": 59
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9729,
+    "f1": 0.9593,
+    "accuracy": 0.9485,
+    "grounding_precision": 0.6012,
+    "grounding_recall": 0.7277,
+    "grounded_clips": 58
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 0.9697,
+    "accuracy": 0.9583,
+    "grounding_precision": 0.7145,
+    "grounding_recall": 0.6854,
+    "grounded_clips": 32
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 0.9697,
+    "accuracy": 0.9583,
+    "grounding_precision": 0.6103,
+    "grounding_recall": 0.7064,
+    "grounded_clips": 32
+   }
+  },
+  "s4_c": {
+   "all": {
+    "clips": 799,
+    "auc": 0.8558,
+    "auc_ci": [
+     0.831,
+     0.8799
+    ],
+    "ap": 0.9115,
+    "f1": 0.6763,
+    "precision": 0.9847,
+    "recall": 0.515,
+    "f1_ci": [
+     0.6377,
+     0.7139
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3206,
+    "frame_ap_1s": 0.4834,
+    "frame_ap": 0.4719,
+    "frame_ap_no_segments": 0.5635,
+    "grounding_precision": 0.5962,
+    "grounding_recall": 0.4266,
+    "grounded_clips": 249,
+    "tokens_per_clip": 2907.3,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 13.6,
+    "cited_per_clip": 2.67
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.8625,
+    "auc_ci": [
+     0.8385,
+     0.8876
+    ],
+    "ap": 0.9161,
+    "f1": 0.6857,
+    "precision": 0.9844,
+    "recall": 0.5261,
+    "f1_ci": [
+     0.6486,
+     0.7238
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1587,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3194,
+    "frame_ap_1s": 0.4895,
+    "grounding_precision": 0.603,
+    "grounding_recall": 0.4321,
+    "grounded_clips": 244,
+    "tokens_per_clip": 2926.6,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 13.83,
+    "cited_per_clip": 2.75
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9286,
+    "f1": 0.6869,
+    "accuracy": 0.6804,
+    "grounding_precision": 0.6871,
+    "grounding_recall": 0.4519,
+    "grounded_clips": 33
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9167,
+    "f1": 0.701,
+    "accuracy": 0.701,
+    "grounding_precision": 0.5483,
+    "grounding_recall": 0.4574,
+    "grounded_clips": 32
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 0.8729,
+    "f1": 0.64,
+    "accuracy": 0.625,
+    "grounding_precision": 0.7443,
+    "grounding_recall": 0.5122,
+    "grounded_clips": 15
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 0.8729,
+    "f1": 0.64,
+    "accuracy": 0.625,
+    "grounding_precision": 0.48,
+    "grounding_recall": 0.4544,
+    "grounded_clips": 15
+   }
+  },
+  "s4_r": {
+   "all": {
+    "clips": 799,
+    "auc": 0.9917,
+    "auc_ci": [
+     0.9865,
+     0.996
+    ],
+    "ap": 0.9952,
+    "f1": 0.9672,
+    "precision": 0.9605,
+    "recall": 0.9739,
+    "f1_ci": [
+     0.9553,
+     0.978
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1603,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3206,
+    "frame_ap_1s": 0.5366,
+    "frame_ap": 0.5137,
+    "frame_ap_no_segments": 0.524,
+    "grounding_precision": 0.6202,
+    "grounding_recall": 0.7688,
+    "grounded_clips": 472,
+    "tokens_per_clip": 2968.3,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 14.52,
+    "cited_per_clip": 6.5
+   },
+   "with_sound": {
+    "clips": 765,
+    "auc": 0.9915,
+    "auc_ci": [
+     0.9861,
+     0.9958
+    ],
+    "ap": 0.9951,
+    "f1": 0.9668,
+    "precision": 0.9608,
+    "recall": 0.9729,
+    "f1_ci": [
+     0.9544,
+     0.9776
+    ],
+    "unparsed": 0,
+    "triage10_precision": 1.0,
+    "triage10_recall": 0.1587,
+    "triage20_precision": 1.0,
+    "triage20_recall": 0.3194,
+    "frame_ap_1s": 0.5397,
+    "grounding_precision": 0.6236,
+    "grounding_recall": 0.7658,
+    "grounded_clips": 453,
+    "tokens_per_clip": 2988.3,
+    "calls_per_clip": 1.0,
+    "seconds_per_clip": 14.68,
+    "cited_per_clip": 6.61
+   },
+   "vs_A": {
+    "clips": 97,
+    "auc": 0.9971,
+    "f1": 0.9683,
+    "accuracy": 0.9588,
+    "grounding_precision": 0.7319,
+    "grounding_recall": 0.7438,
+    "grounded_clips": 61
+   },
+   "labels_on_A_clips": {
+    "clips": 97,
+    "auc": 0.9986,
+    "f1": 0.9839,
+    "accuracy": 0.9794,
+    "grounding_precision": 0.5854,
+    "grounding_recall": 0.7797,
+    "grounded_clips": 60
+   },
+   "vs_B": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.7441,
+    "grounding_recall": 0.7464,
+    "grounded_clips": 34
+   },
+   "labels_on_B_clips": {
+    "clips": 48,
+    "auc": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "grounding_precision": 0.6142,
+    "grounding_recall": 0.7724,
+    "grounded_clips": 34
+   }
+  }
+ },
+ "pairs": {
+  "s3 - s2": {
+   "all": {
+    "clips": 799,
+    "f1_diff": 0.0048,
+    "f1_diff_ci": [
+     -0.0115,
+     0.0201
+    ],
+    "auc_diff": 0.0104,
+    "auc_diff_ci": [
+     -0.0071,
+     0.0282
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": 0.0069,
+    "f1_diff_ci": [
+     -0.0095,
+     0.0244
+    ],
+    "auc_diff": 0.0129,
+    "auc_diff_ci": [
+     -0.0053,
+     0.0307
+    ]
+   }
+  },
+  "s3v2 - s2": {
+   "all": {
+    "clips": 799,
+    "f1_diff": -0.0058,
+    "f1_diff_ci": [
+     -0.0212,
+     0.0087
+    ],
+    "auc_diff": 0.0193,
+    "auc_diff_ci": [
+     0.0041,
+     0.0353
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": -0.0042,
+    "f1_diff_ci": [
+     -0.0197,
+     0.0117
+    ],
+    "auc_diff": 0.0207,
+    "auc_diff_ci": [
+     0.0041,
+     0.037
+    ]
+   }
+  },
+  "s3 - s1": {
+   "all": {
+    "clips": 799,
+    "f1_diff": -0.0328,
+    "f1_diff_ci": [
+     -0.0498,
+     -0.017
+    ],
+    "auc_diff": -0.0457,
+    "auc_diff_ci": [
+     -0.0633,
+     -0.0305
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": -0.0333,
+    "f1_diff_ci": [
+     -0.0509,
+     -0.0173
+    ],
+    "auc_diff": -0.0456,
+    "auc_diff_ci": [
+     -0.0628,
+     -0.0307
+    ]
+   }
+  },
+  "s4 - s1": {
+   "all": {
+    "clips": 799,
+    "f1_diff": -0.0006,
+    "f1_diff_ci": [
+     -0.014,
+     0.0121
+    ],
+    "auc_diff": -0.0051,
+    "auc_diff_ci": [
+     -0.0094,
+     -0.0012
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": -0.0006,
+    "f1_diff_ci": [
+     -0.0138,
+     0.0125
+    ],
+    "auc_diff": -0.0051,
+    "auc_diff_ci": [
+     -0.01,
+     -0.0013
+    ]
+   }
+  },
+  "s4 - s1_ts": {
+   "all": {
+    "clips": 799,
+    "f1_diff": 0.0013,
+    "f1_diff_ci": [
+     -0.0119,
+     0.0143
+    ],
+    "auc_diff": -0.0052,
+    "auc_diff_ci": [
+     -0.0098,
+     -0.0011
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": 0.0014,
+    "f1_diff_ci": [
+     -0.0121,
+     0.0144
+    ],
+    "auc_diff": -0.0054,
+    "auc_diff_ci": [
+     -0.0105,
+     -0.0012
+    ]
+   }
+  },
+  "s3 - s4": {
+   "all": {
+    "clips": 799,
+    "f1_diff": -0.0323,
+    "f1_diff_ci": [
+     -0.0463,
+     -0.0191
+    ],
+    "auc_diff": -0.0406,
+    "auc_diff_ci": [
+     -0.0567,
+     -0.0268
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": -0.0327,
+    "f1_diff_ci": [
+     -0.0479,
+     -0.0186
+    ],
+    "auc_diff": -0.0405,
+    "auc_diff_ci": [
+     -0.0563,
+     -0.0266
+    ]
+   }
+  },
+  "s3v2 - s3": {
+   "all": {
+    "clips": 799,
+    "f1_diff": -0.0106,
+    "f1_diff_ci": [
+     -0.0269,
+     0.0054
+    ],
+    "auc_diff": 0.009,
+    "auc_diff_ci": [
+     -0.0052,
+     0.0234
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": -0.0111,
+    "f1_diff_ci": [
+     -0.0274,
+     0.0051
+    ],
+    "auc_diff": 0.0079,
+    "auc_diff_ci": [
+     -0.006,
+     0.0229
+    ]
+   }
+  },
+  "s3 - s3_no_edges": {
+   "all": {
+    "clips": 799,
+    "f1_diff": 0.0049,
+    "f1_diff_ci": [
+     -0.0003,
+     0.0107
+    ],
+    "auc_diff": 0.0042,
+    "auc_diff_ci": [
+     -0.0012,
+     0.011
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": 0.0051,
+    "f1_diff_ci": [
+     -0.0001,
+     0.0109
+    ],
+    "auc_diff": 0.0044,
+    "auc_diff_ci": [
+     -0.0012,
+     0.0113
+    ]
+   }
+  },
+  "s3v2 - s3v2_no_edges": {
+   "all": {
+    "clips": 799,
+    "f1_diff": -0.0128,
+    "f1_diff_ci": [
+     -0.0237,
+     -0.003
+    ],
+    "auc_diff": 0.0015,
+    "auc_diff_ci": [
+     -0.0084,
+     0.0112
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": -0.0124,
+    "f1_diff_ci": [
+     -0.0234,
+     -0.0021
+    ],
+    "auc_diff": 0.0003,
+    "auc_diff_ci": [
+     -0.0091,
+     0.0105
+    ]
+   }
+  },
+  "s3 - s3_no_audio": {
+   "all": {
+    "clips": 799,
+    "f1_diff": 0.0128,
+    "f1_diff_ci": [
+     0.0026,
+     0.0231
+    ],
+    "auc_diff": 0.0095,
+    "auc_diff_ci": [
+     0.0029,
+     0.0167
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": 0.0134,
+    "f1_diff_ci": [
+     0.0032,
+     0.0244
+    ],
+    "auc_diff": 0.01,
+    "auc_diff_ci": [
+     0.0031,
+     0.0175
+    ]
+   }
+  },
+  "s3v2 - s3v2_no_audio": {
+   "all": {
+    "clips": 799,
+    "f1_diff": -0.0031,
+    "f1_diff_ci": [
+     -0.0133,
+     0.0069
+    ],
+    "auc_diff": 0.0088,
+    "auc_diff_ci": [
+     -0.0013,
+     0.0185
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": -0.0023,
+    "f1_diff_ci": [
+     -0.0124,
+     0.0079
+    ],
+    "auc_diff": 0.0094,
+    "auc_diff_ci": [
+     -0.0005,
+     0.0196
+    ]
+   }
+  },
+  "s4 - s4_no_audio": {
+   "all": {
+    "clips": 799,
+    "f1_diff": 0.0117,
+    "f1_diff_ci": [
+     0.0037,
+     0.0204
+    ],
+    "auc_diff": 0.005,
+    "auc_diff_ci": [
+     0.0019,
+     0.0092
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": 0.0122,
+    "f1_diff_ci": [
+     0.0036,
+     0.0213
+    ],
+    "auc_diff": 0.0052,
+    "auc_diff_ci": [
+     0.002,
+     0.0095
+    ]
+   }
+  },
+  "s4 - s4_no_speech": {
+   "all": {
+    "clips": 799,
+    "f1_diff": 0.0048,
+    "f1_diff_ci": [
+     -0.0011,
+     0.0116
+    ],
+    "auc_diff": 0.0012,
+    "auc_diff_ci": [
+     -0.0022,
+     0.0051
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": 0.005,
+    "f1_diff_ci": [
+     -0.0012,
+     0.0115
+    ],
+    "auc_diff": 0.0012,
+    "auc_diff_ci": [
+     -0.0024,
+     0.0051
+    ]
+   }
+  },
+  "s4 - s4_no_audio_speech": {
+   "all": {
+    "clips": 799,
+    "f1_diff": 0.0165,
+    "f1_diff_ci": [
+     0.0071,
+     0.0274
+    ],
+    "auc_diff": 0.0086,
+    "auc_diff_ci": [
+     0.0028,
+     0.0154
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": 0.0172,
+    "f1_diff_ci": [
+     0.0072,
+     0.0274
+    ],
+    "auc_diff": 0.0089,
+    "auc_diff_ci": [
+     0.0029,
+     0.0155
+    ]
+   }
+  },
+  "s3_qwen36 - s3": {
+   "all": {
+    "clips": 799,
+    "f1_diff": 0.004,
+    "f1_diff_ci": [
+     -0.0113,
+     0.0198
+    ],
+    "auc_diff": 0.028,
+    "auc_diff_ci": [
+     0.0146,
+     0.0428
+    ]
+   },
+   "with_sound": {
+    "clips": 765,
+    "f1_diff": 0.0032,
+    "f1_diff_ci": [
+     -0.0132,
+     0.0189
+    ],
+    "auc_diff": 0.0278,
+    "auc_diff_ci": [
+     0.014,
+     0.0427
+    ]
+   }
+  }
+ },
+ "faithfulness": {
+  "s3": {
+   "flip_rate_cited": 0.4639,
+   "score_shift_cited": 0.4554,
+   "clips_cited": 485,
+   "flip_rate_random": 0.0289,
+   "score_shift_random": 0.0323,
+   "clips_random": 485
+  },
+  "s3v2": {
+   "flip_rate_cited": 0.5491,
+   "score_shift_cited": 0.5404,
+   "clips_cited": 479,
+   "flip_rate_random": 0.0167,
+   "score_shift_random": 0.0172,
+   "clips_random": 479
+  },
+  "s4": {
+   "flip_rate_cited": 0.4911,
+   "score_shift_cited": 0.4842,
+   "clips_cited": 505,
+   "flip_rate_random": 0.0059,
+   "score_shift_random": 0.005,
+   "clips_random": 505
+  }
+ }
+}

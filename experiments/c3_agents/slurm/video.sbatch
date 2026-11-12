@@ -19,5 +19,6 @@ export YOLO_AUTOINSTALL=false   # never let ultralytics pip-install into the use
 mkdir -p models && cd models   # person_weapons.pt is copied here; YOLO-World downloads here
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 python3 ../code/experiments/c3_agents/video_pass.py \
-    --videos-root ../data/XD-Violence/test --out ../out/video \
-    --shard "${SHARD:-0}" --shards "${SHARDS:-1}" ${LIMIT:+--limit $LIMIT}
+    --videos-root ../data/XD-Violence/test --out "../out/${OUT:-video}" \
+    ${REUSE:+--reuse-detections "../out/$REUSE"} \
+    --shard "${SHARD:-0}" --shards "${SHARDS:-1}" ${LIMIT:+--limit $LIMIT} ${REVERSE:+--reverse}

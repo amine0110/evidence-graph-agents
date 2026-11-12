@@ -26,9 +26,14 @@ DETECT_MIN = 0.15
 VLM = "Qwen/Qwen3-VL-8B-Instruct"
 CHUNK = 4  # seconds per caption, one frame per second
 FRAME_SIDE = 448
+# caption-v1 asked to "mention weapons, fire, vehicles or injuries only if you see
+# them"; the model then closed most captions with "No weapons, fire, vehicles or
+# injuries are visible", even beside a gun it had just described. caption-v2 asks
+# for what is seen and nothing about what is absent.
+PROMPT_VERSION = "caption-v2"
 PROMPT = ("These are {n} frames, one second apart, from a video. In at most 40 words, "
-          "describe factually what the people do and what happens. Mention weapons, fire, "
-          "vehicles or injuries only if you see them.")
+          "describe factually what the people do and what happens. Describe only what you see; "
+          "do not list things that are absent.")
 
 
 def clip_id(stem):
@@ -93,6 +98,8 @@ def main(argv=None):
     parser.add_argument("--shard", type=int, default=0)
     parser.add_argument("--shards", type=int, default=1)
     parser.add_argument("--limit", type=int, help="only the first N clips of this shard (tests)")
+    parser.add_argument("--reverse", action="store_true", help="walk the shard from the end (a helper job)")
+    parser.add_argument("--reuse-detections", help="earlier output folder: copy its detections, redo only captions")
     args = parser.parse_args(argv)
 
     import torch
@@ -101,21 +108,24 @@ def main(argv=None):
     from transformers import AutoModelForImageTextToText, AutoProcessor
     from ultralytics import YOLO, YOLOWorld
 
-    weapons = YOLO(WEAPONS)
-    detector = YOLOWorld(DETECTOR)
-    detector.set_classes(OBJECTS)
+    if not args.reuse_detections:
+        weapons = YOLO(WEAPONS)
+        detector = YOLOWorld(DETECTOR)
+        detector.set_classes(OBJECTS)
     processor = AutoProcessor.from_pretrained(VLM)
     processor.tokenizer.padding_side = "left"
     model = AutoModelForImageTextToText.from_pretrained(VLM, dtype=torch.bfloat16, device_map="cuda").eval()
     versions = {"detectors": {WEAPONS: f"ultralytics {ultralytics.__version__} {WEAPONS}",
                               DETECTOR: f"ultralytics {ultralytics.__version__} {DETECTOR}"},
-                "vlm": f"transformers {transformers.__version__} {VLM}"}
+                "vlm": f"transformers {transformers.__version__} {VLM} {PROMPT_VERSION}"}
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     videos = sorted(Path(args.videos_root).glob("*.mp4"))[args.shard::args.shards]
     if args.limit:
         videos = videos[:args.limit]
+    if args.reverse:
+        videos = videos[::-1]
     t0 = time.time()
     for i, video in enumerate(videos, 1):
         target = out / f"{clip_id(video.stem)}.json"
@@ -123,8 +133,13 @@ def main(argv=None):
             continue
         start = time.time()
         frames = frames_per_second(video)
-        record = {"clip_id": clip_id(video.stem), **versions, "frames": len(frames),
-                  "detections": detect(weapons, WEAPONS, frames) + detect(detector, DETECTOR, frames),
+        if args.reuse_detections:
+            old = json.loads((Path(args.reuse_detections) / target.name).read_text())
+            found = {"detectors": old["detectors"], "detections": old["detections"]}
+        else:
+            found = {"detectors": versions["detectors"],
+                     "detections": detect(weapons, WEAPONS, frames) + detect(detector, DETECTOR, frames)}
+        record = {"clip_id": clip_id(video.stem), **versions, **found, "frames": len(frames),
                   "captions": caption(model, processor, frames)}
         record["seconds"] = round(time.time() - start, 1)
         tmp = target.with_suffix(".tmp")

@@ -1,0 +1,10 @@
+{
+  "name": "XD-Violence test split, all clips",
+  "clips": 799,
+  "classes": {
+    "normal": 300,
+    "violent": 499
+  },
+  "hash": "sha256 of sorted '<file>\\t<bytes>' lines",
+  "sha256": "c0ea5212ef2d4018b86091681139498d33972095ec93e01daf1382d3f388d084"
+}

@@ -1,0 +1,37 @@
+{
+ "note": "GPU seconds per clip, 799 test clips; GPUs differ (RTX 4090, 3090, PRO 4500, PRO 6000, MacBook GPU), so indicative only",
+ "perception": {
+  "video_detections": {
+   "s": 4.86,
+   "hw": "RTX 4090/3090",
+   "how": "caption-v1 pass time minus caption-v2 pass time"
+  },
+  "video_captions_v2": {
+   "s": 9.48,
+   "hw": "mixed"
+  },
+  "asr": {
+   "s": 1.61,
+   "hw": "RTX 4090"
+  },
+  "speech_tags": {
+   "s": 0.95,
+   "hw": "RTX PRO 4500"
+  },
+  "sound_tagger": {
+   "s": 2.63,
+   "hw": "MacBook GPU"
+  }
+ },
+ "reasoning_job_seconds_per_clip": {
+  "s4": 0.86,
+  "s3": 1.18,
+  "s2": 3.26,
+  "hw": "RTX PRO 4500, vLLM batched"
+ },
+ "s1": {
+  "s": 6.25,
+  "hw": "RTX PRO 6000, one clip at a time"
+ },
+ "s4_total": 20.39
+}
