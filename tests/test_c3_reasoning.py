@@ -84,3 +84,15 @@ def test_s3v2_timeline_and_events():
     out = reasoning.run_s3v2(llm, view)
     assert out["decision"] == "yes" and "gunshot" in llm.seen[1][-1]["content"]
     assert reasoning.View(graph(), edges=False).events() == "links are not available"
+
+
+def test_paraphrase_changes_only_the_opening_paragraph():
+    assert reasoning.S3_INTRO in reasoning.S3_SYSTEM
+    p2 = reasoning.S3_SYSTEM.replace(reasoning.S3_INTRO, reasoning.S3_INTRO_P2)
+    assert p2 != reasoning.S3_SYSTEM and p2.split("\n\n")[1:] == reasoning.S3_SYSTEM.split("\n\n")[1:]
+    old = reasoning.PARAPHRASE
+    reasoning.PARAPHRASE = True
+    llm = FakeLLM(["No\nnone\nnone"])
+    reasoning.run_s4(llm, reasoning.View(graph()))
+    assert llm.seen[0][0]["content"] == reasoning.S4_SYSTEM_P2
+    reasoning.PARAPHRASE = old

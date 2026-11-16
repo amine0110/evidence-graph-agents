@@ -1,0 +1,67 @@
+{
+ "clip_id": "xe436dd1e82",
+ "duration": 17.0,
+ "evidence": [
+  "[n1] 0-4s video description: A figure with a bright light emerges from a doorway. A man with bloodied face turns, then lunges forward. He stands in a dark, arched corridor, smoke billowing from his body.",
+  "[n2] 0-6s video detector saw 'person' (up to 1 at once, 5 s, conf 0.96)",
+  "[n3] 0-15s sound: gunshot (Machine gun, conf 0.28)",
+  "[n4] 1-2s speech (en, conf 0.40): \"Oh, my God!\"",
+  "[n5] 1-2s speech tagged distress, conf 1.00: \"Oh, my God!\"",
+  "[n6] 2-16s speech (en, conf 0.40): \"Jerks. They should have shot me in the head, and enough times to make sure.\"",
+  "[n7] 2-16s speech tagged report, conf 1.00: \"Jerks. They should have shot me in the head, and enough times to make sure.\"",
+  "[n8] 3-5s video detector saw 'pistol_hand_gun' (up to 1 at once, 2 s, conf 0.64)",
+  "[n9] 4-8s video description: A bloodied, disfigured figure stands in a dark, stone-walled room. The figure’s head tilts back, mouth open as if screaming. The scene is dimly lit, with smoke or steam visible in the background.",
+  "[n10] 8-12s video description: Four surgeons in blood-stained gowns and caps look down from above at surgical lights. Their heads are visible, suggesting they are focused on a procedure below.",
+  "[n11] 11-17s video detector saw 'person' (up to 2 at once, 6 s, conf 0.92)",
+  "[n12] 12-16s video description: Surgeons in blood-splattered scrubs and gloves perform surgery. One surgeon holds a scalpel, another a surgical instrument. Blood drips from their hands and clothing. The scene is intense and graphic.",
+  "[n13] 16-16s speech (en, conf 0.40): \"It...\"",
+  "[n14] 16-17s video description: Surgical team in white gowns and masks, blood-splattered, hunched over patient. Bright overhead lights illuminate scene. One surgeon holds instrument near patient’s body. Blood drips down gowns."
+ ],
+ "systems": {
+  "s2": {
+   "score": 1.0,
+   "answer": "Yes\n0-17\nn1, n2, n3",
+   "trace": [
+    {
+     "ask": "video",
+     "question": "Can you clarify if the 'bloodied, disfigured figure' and the 'surgical procedure' appear to be part of a cinematic/movie production (e.g., special effects, studio lighting) or a real-life event?"
+    },
+    {
+     "done": true
+    }
+   ]
+  },
+  "s3": {
+   "score": 0.1259,
+   "answer": "No\nnone\nnone",
+   "trace": [
+    {
+     "tool": "window",
+     "start": 0,
+     "end": 17,
+     "kind": "caption"
+    },
+    {
+     "tool": "search",
+     "concept": "gun"
+    },
+    {
+     "tool": "done"
+    }
+   ]
+  },
+  "s4": {
+   "score": 0.9996,
+   "answer": "Yes\n0-17\nn1, n3, n5, n6, n7, n8, n9, n12, n14",
+   "trace": []
+  },
+  "s1_omni": {
+   "score": 0.9859,
+   "answer": "Yes\n0-4, 10-15"
+  },
+  "s1_ts": {
+   "score": 0.9924,
+   "answer": "Yes\n0-17"
+  }
+ }
+}

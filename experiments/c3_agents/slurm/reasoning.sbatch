@@ -20,7 +20,7 @@ PORT=$((8000 + SLURM_JOB_ID % 1000))
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 PYTHONPATH=$HOME/c3/vllmlib:$HOME/c3/vllmlib/nvidia_cutlass_dsl/dsl_packages PATH=$HOME/c3/vllmlib/bin:$PATH \
     python3 -m vllm.entrypoints.openai.api_server --model "$MODEL" --port "$PORT" \
-    --max-model-len "${MAX_LEN:-65536}" --gpu-memory-utilization 0.90 ${MAX_SEQS:+--max-num-seqs "$MAX_SEQS"} \
+    --max-model-len "${MAX_LEN:-65536}" --gpu-memory-utilization 0.90 ${MAX_SEQS:+--max-num-seqs "$MAX_SEQS"} --tensor-parallel-size "${TP:-1}" \
     > "logs/vllm_${SLURM_JOB_ID}.log" 2>&1 &
 SERVER=$!
 trap 'kill $SERVER 2>/dev/null || true' EXIT

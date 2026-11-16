@@ -321,9 +321,27 @@ You read the graph with tools. Reply with exactly one JSON object per turn, noth
 You have at most %d tool calls."""
 
 
+# Prompt-sensitivity check: the same instructions in other words. Only the opening paragraph changes;
+# the tool list and the final question are identical.
+S3_INTRO = S3_SYSTEM.split("\n\n")[0]
+S3_INTRO_P2 = ("Your job is to judge one video clip for a review system. Before you, several perception models went "
+               "through the clip and saved their findings in a shared evidence graph: a description of every 4 "
+               "seconds of video, object detections, sound events, transcribed speech, and speech marked as a "
+               "threat, as distress, or as a report of violence. Each finding has a time span and, when one exists, "
+               "a confidence. Links tell you when two findings describe the same event, back each other up, or "
+               "contradict each other. Any of these models can be wrong, so compare their findings before deciding.")
+S4_SYSTEM_P2 = ("Your job is to judge one video clip for a review system. Before you, several perception models went "
+                "through the clip; their findings are listed below in time order: a description of every 4 seconds "
+                "of video, object detections, sound events, transcribed speech, and speech marked as a threat, as "
+                "distress, or as a report of violence. Any of these models can be wrong, so compare their findings "
+                "before deciding.")
+PARAPHRASE = False
+
+
 def run_s3(llm, view):
     usage, trace = Usage(), []
-    messages = [{"role": "system", "content": S3_SYSTEM % MAX_STEPS},
+    system = S3_SYSTEM.replace(S3_INTRO, S3_INTRO_P2) if PARAPHRASE else S3_SYSTEM
+    messages = [{"role": "system", "content": system % MAX_STEPS},
                 {"role": "user", "content": "Task: " + QUESTION.split("\n")[0] + "\n\n" + view.overview()}]
     for _ in range(MAX_STEPS):
         text, u, _ = llm.chat(messages, max_tokens=120)
@@ -450,7 +468,7 @@ S4_SYSTEM = ("You are the reasoning agent of a video review system. Perception a
 
 def run_s4(llm, view):
     usage = Usage()
-    messages = [{"role": "system", "content": S4_SYSTEM},
+    messages = [{"role": "system", "content": S4_SYSTEM_P2 if PARAPHRASE else S4_SYSTEM},
                 {"role": "user", "content": f"Clip length {view.duration:.0f} s.\n" + view.lines(view.nodes, limit=10 ** 6)}]
     return final_turn(llm, messages, usage, view, [])
 
@@ -559,6 +577,7 @@ def main(argv=None):
     parser.add_argument("--server", default="http://localhost:8000")
     parser.add_argument("--model", default="google/gemma-4-12B-it")
     parser.add_argument("--workers", type=int, default=32)
+    parser.add_argument("--paraphrase", action="store_true", help="S3/S4: the reworded opening paragraph")
     parser.add_argument("--no-think", action="store_true", help="turn off a thinking mode (Qwen3.6)")
     parser.add_argument("--limit", type=int)
     parser.add_argument("--variant", choices=S3V2_VARIANTS, default="c", help="S3 v2 variant (dev-selected: c)")
@@ -584,7 +603,9 @@ def main(argv=None):
     done = {json.loads(l)["clip_id"] for l in open(out)} if out.exists() else set()
     todo = [c for c in cids if c not in done][:args.limit]
     llm = LLM(args.server, args.model, no_think=args.no_think)
-    config = {"system": args.system, "s3v2": args.variant if args.system == "s3v2" else None, "model": args.model, "no_think": args.no_think, "task": TASK_VERSION, "drop": args.drop,
+    global PARAPHRASE
+    PARAPHRASE = args.paraphrase
+    config = {"system": args.system, "s3v2": args.variant if args.system == "s3v2" else None, "model": args.model, "no_think": args.no_think, "paraphrase": args.paraphrase, "task": TASK_VERSION, "drop": args.drop,
               "no_edges": args.no_edges, "no_confidence": args.no_confidence,
               "delete": "cited" if args.delete_cited else "random" if args.delete_random else None,
               "from": earlier_path}

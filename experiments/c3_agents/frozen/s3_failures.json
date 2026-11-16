@@ -1,0 +1,213 @@
+{
+ "method": "S3 v1 errors where S4 was right (all 40); categories fixed before reading except weak_evidence, added while reading",
+ "categories": {
+  "early_stop": "stopped before the decisive evidence was shown",
+  "misjudged": "the decisive evidence was shown, but the decision went the other way",
+  "detector_lure": "false object detections drove a wrong Yes",
+  "vocabulary": "searched for a concept the lexicon does not cover",
+  "label_debatable": "the clip's label is itself debatable under the annotation protocol",
+  "weak_evidence": "the only cue was faint; a No is defensible (added while reading)"
+ },
+ "labels": [
+  {
+   "clip_id": "x34cad39523",
+   "category": "label_debatable",
+   "note": "small fires and battery sparks, no people at risk"
+  },
+  {
+   "clip_id": "x898a7324de",
+   "category": "misjudged",
+   "note": "read a hockey fight with a stick strike, answered No"
+  },
+  {
+   "clip_id": "xdb0aa7297b",
+   "category": "detector_lure",
+   "note": "Yes from RPG and pistol detections only"
+  },
+  {
+   "clip_id": "xfb8bc5bbc8",
+   "category": "misjudged",
+   "note": "unconscious person receiving oxygen read as violence"
+  },
+  {
+   "clip_id": "x3282d6db47",
+   "category": "early_stop",
+   "note": "stopped before the collision and the fight in the van"
+  },
+  {
+   "clip_id": "x58e94036c1",
+   "category": "weak_evidence",
+   "note": "only cue a faint boom (0.14); descriptions show nothing"
+  },
+  {
+   "clip_id": "xa941a7e1bd",
+   "category": "label_debatable",
+   "note": "a man aims a gun at a guard in a film; protocol says Yes, label normal"
+  },
+  {
+   "clip_id": "xd7cd8bfe9c",
+   "category": "label_debatable",
+   "note": "martial-arts sparring with a knockout; sport under rules"
+  },
+  {
+   "clip_id": "xb5276a5c95",
+   "category": "misjudged",
+   "note": "read a facility exploding, answered No"
+  },
+  {
+   "clip_id": "xfd9efe0a18",
+   "category": "label_debatable",
+   "note": "static promotional images of fights and wrecks"
+  },
+  {
+   "clip_id": "x0f7ff75d2c",
+   "category": "detector_lure",
+   "note": "Yes from pistol and knife detections only"
+  },
+  {
+   "clip_id": "x85b454f901",
+   "category": "early_stop",
+   "note": "explosions in unread time spans"
+  },
+  {
+   "clip_id": "x24d1359216",
+   "category": "early_stop",
+   "note": "gun held to a woman's head in an unread span"
+  },
+  {
+   "clip_id": "x2625617016",
+   "category": "detector_lure",
+   "note": "pistol detections plus an ambiguous phone call tagged threat"
+  },
+  {
+   "clip_id": "x3ec14823d1",
+   "category": "weak_evidence",
+   "note": "faint explosion and artillery sounds (0.13, 0.11)"
+  },
+  {
+   "clip_id": "xe436dd1e82",
+   "category": "misjudged",
+   "note": "read a bloodied man, machine-gun sound and 'Oh my God', answered No"
+  },
+  {
+   "clip_id": "xe6b1e84252",
+   "category": "label_debatable",
+   "note": "explicit death threat in a film; protocol says Yes, label normal"
+  },
+  {
+   "clip_id": "xc6fca143b5",
+   "category": "misjudged",
+   "note": "animated explosion read, answered No"
+  },
+  {
+   "clip_id": "x8e9259ba39",
+   "category": "detector_lure",
+   "note": "Yes from one pistol detection (0.42)"
+  },
+  {
+   "clip_id": "x596ad5a973",
+   "category": "misjudged",
+   "note": "read men grappling on a floor, answered No"
+  },
+  {
+   "clip_id": "x3ffffba9f2",
+   "category": "label_debatable",
+   "note": "backyard explosion experiment, no one at risk"
+  },
+  {
+   "clip_id": "xf5f6b6b4ad",
+   "category": "detector_lure",
+   "note": "Yes from many pistol and RPG detections"
+  },
+  {
+   "clip_id": "x47729487cf",
+   "category": "detector_lure",
+   "note": "Yes from pistol detections and an artillery sound"
+  },
+  {
+   "clip_id": "x3d40a86215",
+   "category": "early_stop",
+   "note": "volcano eruption in an unread span"
+  },
+  {
+   "clip_id": "x44ffdd8a0a",
+   "category": "misjudged",
+   "note": "gunshot sound and pistol detection read, answered No"
+  },
+  {
+   "clip_id": "xa21ab3b294",
+   "category": "early_stop",
+   "note": "hockey fight in unread spans"
+  },
+  {
+   "clip_id": "x2d4bc28845",
+   "category": "weak_evidence",
+   "note": "explosion sound (0.29) and RPG detections only; descriptions show nothing"
+  },
+  {
+   "clip_id": "x7f212a52a6",
+   "category": "misjudged",
+   "note": "read a hockey brawl, answered No"
+  },
+  {
+   "clip_id": "x8145ffe577",
+   "category": "early_stop",
+   "note": "car crashes in unread spans"
+  },
+  {
+   "clip_id": "x5ef379bcb0",
+   "category": "early_stop",
+   "note": "hockey fight in unread spans"
+  },
+  {
+   "clip_id": "x128d84d937",
+   "category": "misjudged",
+   "note": "gunshot and explosion sounds read, answered No"
+  },
+  {
+   "clip_id": "x4dc6bf7a1f",
+   "category": "label_debatable",
+   "note": "cockfight: violence to animals, not people"
+  },
+  {
+   "clip_id": "xa71a738e0b",
+   "category": "weak_evidence",
+   "note": "only cue a faint gunshot sound (0.18)"
+  },
+  {
+   "clip_id": "x2ab428df3d",
+   "category": "early_stop",
+   "note": "basketball scuffle in unread spans"
+  },
+  {
+   "clip_id": "xfcc921f5ba",
+   "category": "detector_lure",
+   "note": "pistol and knife detections plus a fearful line"
+  },
+  {
+   "clip_id": "xafeff2fb0c",
+   "category": "early_stop",
+   "note": "assault on a person in an unread span"
+  },
+  {
+   "clip_id": "xf7f59414e7",
+   "category": "early_stop",
+   "note": "read the descriptions but not the speech reporting bottles thrown at police"
+  },
+  {
+   "clip_id": "xcbbd987c16",
+   "category": "label_debatable",
+   "note": "woman with a bloodied face walking; injuries visible, label normal"
+  },
+  {
+   "clip_id": "x99f60827b5",
+   "category": "label_debatable",
+   "note": "death threat and gun in a film; protocol says Yes, label normal"
+  },
+  {
+   "clip_id": "xa234b460a5",
+   "category": "detector_lure",
+   "note": "Yes from machine-gun and pistol detections"
+  }
+ ]
+}

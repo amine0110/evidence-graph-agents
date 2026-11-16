@@ -1,0 +1,47 @@
+{
+ "all": {
+  "clips": 799,
+  "median_shown_share": 0.505,
+  "s4_evidence_never_shown": 9,
+  "s4_evidence_partly_shown": 307,
+  "s4_evidence_all_shown": 189,
+  "with_s4_citations": 505,
+  "mean_tool_calls": 2.38
+ },
+ "s3_wrong_s4_right": {
+  "clips": 40,
+  "median_shown_share": 0.417,
+  "s4_evidence_never_shown": 4,
+  "s4_evidence_partly_shown": 11,
+  "s4_evidence_all_shown": 12,
+  "with_s4_citations": 27,
+  "mean_tool_calls": 2.6
+ },
+ "s3_wrong_s4_right_violent": {
+  "clips": 27,
+  "median_shown_share": 0.619,
+  "s4_evidence_never_shown": 4,
+  "s4_evidence_partly_shown": 11,
+  "s4_evidence_all_shown": 12,
+  "with_s4_citations": 27,
+  "mean_tool_calls": 2.41
+ },
+ "s3_wrong_s4_right_normal": {
+  "clips": 13,
+  "median_shown_share": 0.171,
+  "s4_evidence_never_shown": 0,
+  "s4_evidence_partly_shown": 0,
+  "s4_evidence_all_shown": 0,
+  "with_s4_citations": 0,
+  "mean_tool_calls": 3.0
+ },
+ "both_right": {
+  "clips": 726,
+  "median_shown_share": 0.508,
+  "s4_evidence_never_shown": 2,
+  "s4_evidence_partly_shown": 290,
+  "s4_evidence_all_shown": 165,
+  "with_s4_citations": 457,
+  "mean_tool_calls": 2.35
+ }
+}
