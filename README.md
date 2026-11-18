@@ -1,8 +1,17 @@
-# evidence-graph-agents
+# What Helps Language-Model Agents Review Violent Video?
+
+[![Project page](https://img.shields.io/badge/project-page-2563eb)](https://amine0110.github.io/evidence-graph-agents/)
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20dataset-xd--violence--review-ffcc4d)](https://huggingface.co/datasets/amine0110/xd-violence-review)
+[![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.10%2B-3776ab)
 
 Code for *What Helps Language-Model Agents Review Violent Video? A Controlled
 Comparison with a Human Evidence Reference* (Mokhtari, Mancas, Vandenbulcke,
-University of Mons).
+University of Mons). **Project page:** <https://amine0110.github.io/evidence-graph-agents/>
+
+<p align="center">
+  <img src="docs/assets/overview.svg" alt="Perception agents write observations into an evidence graph; message passing (S2), a graph agent with tools (S3) and flat text (S4) read it with the same reasoning model; S1 is one audio-visual model on the raw clip." width="100%">
+</p>
 
 Perception agents (video description, object detection, sound tagging, speech
 recognition and speech tagging) write what they observe into an evidence graph,
@@ -26,6 +35,7 @@ official XD-Violence page.
 | `experiments/c3_agents/frozen/` | evaluation set hash, development set, final scores, cost per clip, graph statistics |
 | `experiments/c1_relation/`, `experiments/c2_reasoning/` | placeholders for later work |
 | `tests/` | unit tests |
+| `docs/` | project page (GitHub Pages) and the script that builds its data from `frozen/` |
 
 ## Evidence graph
 
@@ -39,6 +49,11 @@ official XD-Violence page.
 - **Veracity** = a belief value for a node at a time. Beliefs are appended,
   never overwritten; the newest counts.
 - Storage: one JSONL file per agent and clip, one record per line.
+
+<p align="center">
+  <img src="docs/assets/example_graph.svg" alt="Evidence graph of a 17-second test clip on a timeline: video descriptions, object detections, a gunshot sound event, speech transcripts and speech tags, linked by same-event, supports and derived-from edges." width="100%">
+  <br><em>The evidence graph of the worked example in the paper, on a timeline. Explore it interactively on the <a href="https://amine0110.github.io/evidence-graph-agents/#graph">project page</a>.</em>
+</p>
 
 ```python
 from evgraph import EvidenceGraph, EdgeType
@@ -58,6 +73,28 @@ prompt version.
 ```bash
 pip install -e ".[test]"
 pytest
+```
+
+## Project page
+
+`docs/` is served by GitHub Pages. Its numbers are read from `experiments/c3_agents/frozen/`; after a change there, rebuild the data files and figures with
+
+```bash
+python docs/build_site_data.py --graphs path/to/XD-Violence/graphs
+```
+
+and preview locally with `python -m http.server --directory docs`.
+
+## Citation
+
+```bibtex
+@misc{mokhtari2026violentvideo,
+  title  = {What Helps Language-Model Agents Review Violent Video?
+            A Controlled Comparison with a Human Evidence Reference},
+  author = {Mokhtari, Mohammed El Amine and Mancas, Matei and Vandenbulcke, Virginie},
+  year   = {2026},
+  note   = {Preprint, University of Mons}
+}
 ```
 
 ## Licence

@@ -1,0 +1,452 @@
+{
+ "duration": 17.0,
+ "nodes": [
+  {
+   "id": "n1",
+   "kind": "caption",
+   "modality": "video",
+   "t": [
+    0.0,
+    4.0
+   ],
+   "confidence": 1.0,
+   "producer": "video",
+   "text": "0-4s video description: A figure with a bright light emerges from a doorway. A man with bloodied face turns, then lunges forward. He stands in a dark, arched corridor, smoke billowing from his body."
+  },
+  {
+   "id": "n2",
+   "kind": "detection",
+   "modality": "video",
+   "t": [
+    0.0,
+    6.0
+   ],
+   "confidence": 0.9567,
+   "producer": "video",
+   "text": "0-6s video detector saw 'person' (up to 1 at once, 5 s, conf 0.96)"
+  },
+  {
+   "id": "n3",
+   "kind": "sound_event",
+   "modality": "audio_event",
+   "t": [
+    0.0,
+    15.0
+   ],
+   "confidence": 0.2844,
+   "producer": "audio_events",
+   "text": "0-15s sound: gunshot (Machine gun, conf 0.28)"
+  },
+  {
+   "id": "n4",
+   "kind": "transcript_segment",
+   "modality": "speech",
+   "t": [
+    0.98,
+    2.28
+   ],
+   "confidence": 0.3987,
+   "producer": "speech",
+   "text": "1-2s speech (en, conf 0.40): \"Oh, my God!\""
+  },
+  {
+   "id": "n5",
+   "kind": "speech_tag",
+   "modality": "speech",
+   "t": [
+    0.98,
+    2.28
+   ],
+   "confidence": 0.9971,
+   "producer": "speech_tags",
+   "text": "1-2s speech tagged distress, conf 1.00: \"Oh, my God!\""
+  },
+  {
+   "id": "n6",
+   "kind": "transcript_segment",
+   "modality": "speech",
+   "t": [
+    2.28,
+    15.63
+   ],
+   "confidence": 0.3987,
+   "producer": "speech",
+   "text": "2-16s speech (en, conf 0.40): \"Jerks. They should have shot me in the head, and enough times to make sure.\""
+  },
+  {
+   "id": "n7",
+   "kind": "speech_tag",
+   "modality": "speech",
+   "t": [
+    2.28,
+    15.63
+   ],
+   "confidence": 0.9969,
+   "producer": "speech_tags",
+   "text": "2-16s speech tagged report, conf 1.00: \"Jerks. They should have shot me in the head, and enough times to make sure.\""
+  },
+  {
+   "id": "n8",
+   "kind": "detection",
+   "modality": "video",
+   "t": [
+    3.0,
+    5.0
+   ],
+   "confidence": 0.6386,
+   "producer": "video",
+   "text": "3-5s video detector saw 'pistol_hand_gun' (up to 1 at once, 2 s, conf 0.64)"
+  },
+  {
+   "id": "n9",
+   "kind": "caption",
+   "modality": "video",
+   "t": [
+    4.0,
+    8.0
+   ],
+   "confidence": 1.0,
+   "producer": "video",
+   "text": "4-8s video description: A bloodied, disfigured figure stands in a dark, stone-walled room. The figure’s head tilts back, mouth open as if screaming. The scene is dimly lit, with smoke or steam visible in the background."
+  },
+  {
+   "id": "n10",
+   "kind": "caption",
+   "modality": "video",
+   "t": [
+    8.0,
+    12.0
+   ],
+   "confidence": 1.0,
+   "producer": "video",
+   "text": "8-12s video description: Four surgeons in blood-stained gowns and caps look down from above at surgical lights. Their heads are visible, suggesting they are focused on a procedure below."
+  },
+  {
+   "id": "n11",
+   "kind": "detection",
+   "modality": "video",
+   "t": [
+    11.0,
+    17.0
+   ],
+   "confidence": 0.9237,
+   "producer": "video",
+   "text": "11-17s video detector saw 'person' (up to 2 at once, 6 s, conf 0.92)"
+  },
+  {
+   "id": "n12",
+   "kind": "caption",
+   "modality": "video",
+   "t": [
+    12.0,
+    16.0
+   ],
+   "confidence": 1.0,
+   "producer": "video",
+   "text": "12-16s video description: Surgeons in blood-splattered scrubs and gloves perform surgery. One surgeon holds a scalpel, another a surgical instrument. Blood drips from their hands and clothing. The scene is intense and graphic."
+  },
+  {
+   "id": "n13",
+   "kind": "transcript_segment",
+   "modality": "speech",
+   "t": [
+    15.63,
+    16.13
+   ],
+   "confidence": 0.3987,
+   "producer": "speech",
+   "text": "16-16s speech (en, conf 0.40): \"It...\""
+  },
+  {
+   "id": "n14",
+   "kind": "caption",
+   "modality": "video",
+   "t": [
+    16.0,
+    17.0
+   ],
+   "confidence": 1.0,
+   "producer": "video",
+   "text": "16-17s video description: Surgical team in white gowns and masks, blood-splattered, hunched over patient. Bright overhead lights illuminate scene. One surgeon holds instrument near patient’s body. Blood drips down gowns."
+  }
+ ],
+ "edges": [
+  {
+   "src": "n3",
+   "dst": "n1",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n3",
+   "dst": "n5",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n3",
+   "dst": "n7",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n3",
+   "dst": "n7",
+   "type": "supports",
+   "score": 0.2844
+  },
+  {
+   "src": "n3",
+   "dst": "n8",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n3",
+   "dst": "n9",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n3",
+   "dst": "n10",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n3",
+   "dst": "n12",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n3",
+   "dst": "n12",
+   "type": "supports",
+   "score": 0.2844
+  },
+  {
+   "src": "n3",
+   "dst": "n14",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n3",
+   "dst": "n14",
+   "type": "supports",
+   "score": 0.2844
+  },
+  {
+   "src": "n1",
+   "dst": "n3",
+   "type": "supports",
+   "score": 0.2844
+  },
+  {
+   "src": "n1",
+   "dst": "n5",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n1",
+   "dst": "n7",
+   "type": "same_event",
+   "score": 0.68
+  },
+  {
+   "src": "n1",
+   "dst": "n7",
+   "type": "supports",
+   "score": 0.9969
+  },
+  {
+   "src": "n1",
+   "dst": "n8",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n1",
+   "dst": "n8",
+   "type": "supports",
+   "score": 0.6386
+  },
+  {
+   "src": "n5",
+   "dst": "n3",
+   "type": "supports",
+   "score": 0.2844
+  },
+  {
+   "src": "n5",
+   "dst": "n1",
+   "type": "supports",
+   "score": 0.9971
+  },
+  {
+   "src": "n5",
+   "dst": "n8",
+   "type": "same_event",
+   "score": 0.7692
+  },
+  {
+   "src": "n5",
+   "dst": "n8",
+   "type": "supports",
+   "score": 0.6386
+  },
+  {
+   "src": "n5",
+   "dst": "n4",
+   "type": "derived_from",
+   "score": null
+  },
+  {
+   "src": "n8",
+   "dst": "n3",
+   "type": "supports",
+   "score": 0.2844
+  },
+  {
+   "src": "n8",
+   "dst": "n7",
+   "type": "supports",
+   "score": 0.6386
+  },
+  {
+   "src": "n8",
+   "dst": "n9",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n8",
+   "dst": "n9",
+   "type": "supports",
+   "score": 0.6386
+  },
+  {
+   "src": "n9",
+   "dst": "n3",
+   "type": "supports",
+   "score": 0.2844
+  },
+  {
+   "src": "n9",
+   "dst": "n7",
+   "type": "supports",
+   "score": 0.9969
+  },
+  {
+   "src": "n10",
+   "dst": "n3",
+   "type": "supports",
+   "score": 0.2844
+  },
+  {
+   "src": "n10",
+   "dst": "n7",
+   "type": "supports",
+   "score": 0.9969
+  },
+  {
+   "src": "n7",
+   "dst": "n8",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n7",
+   "dst": "n9",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n7",
+   "dst": "n10",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n7",
+   "dst": "n12",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n7",
+   "dst": "n12",
+   "type": "supports",
+   "score": 0.9969
+  },
+  {
+   "src": "n7",
+   "dst": "n14",
+   "type": "same_event",
+   "score": 1.0
+  },
+  {
+   "src": "n7",
+   "dst": "n14",
+   "type": "supports",
+   "score": 0.9969
+  },
+  {
+   "src": "n7",
+   "dst": "n6",
+   "type": "derived_from",
+   "score": null
+  }
+ ],
+ "systems": {
+  "s2": {
+   "score": 1.0,
+   "answer": "Yes\n0-17\nn1, n2, n3",
+   "trace": [
+    {
+     "ask": "video",
+     "question": "Can you clarify if the 'bloodied, disfigured figure' and the 'surgical procedure' appear to be part of a cinematic/movie production (e.g., special effects, studio lighting) or a real-life event?"
+    },
+    {
+     "done": true
+    }
+   ]
+  },
+  "s3": {
+   "score": 0.1259,
+   "answer": "No\nnone\nnone",
+   "trace": [
+    {
+     "tool": "window",
+     "start": 0,
+     "end": 17,
+     "kind": "caption"
+    },
+    {
+     "tool": "search",
+     "concept": "gun"
+    },
+    {
+     "tool": "done"
+    }
+   ]
+  },
+  "s4": {
+   "score": 0.9996,
+   "answer": "Yes\n0-17\nn1, n3, n5, n6, n7, n8, n9, n12, n14",
+   "trace": []
+  },
+  "s1_omni": {
+   "score": 0.9859,
+   "answer": "Yes\n0-4, 10-15",
+   "trace": []
+  },
+  "s1_ts": {
+   "score": 0.9924,
+   "answer": "Yes\n0-17",
+   "trace": []
+  }
+ }
+}

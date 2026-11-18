@@ -1,0 +1,131 @@
+{
+ "systems": [
+  {
+   "key": "s1",
+   "label": "S1 audio-visual model on the raw clip",
+   "f1": 0.9678,
+   "f1_ci": [
+    0.956,
+    0.9777
+   ],
+   "auc": 0.9967,
+   "grounding_precision": 0.6454
+  },
+  {
+   "key": "s1_ts",
+   "label": "S1-ts same, with time-labelled chunks",
+   "f1": 0.9659,
+   "f1_ci": [
+    0.9543,
+    0.9767
+   ],
+   "auc": 0.9969,
+   "grounding_precision": 0.5514
+  },
+  {
+   "key": "s2",
+   "label": "S2 agents exchange messages",
+   "f1": 0.9301,
+   "f1_ci": [
+    0.9128,
+    0.9462
+   ],
+   "auc": 0.9407,
+   "grounding_precision": 0.6366
+  },
+  {
+   "key": "s3",
+   "label": "S3 graph agent with tools (v1)",
+   "f1": 0.935,
+   "f1_ci": [
+    0.9173,
+    0.9504
+   ],
+   "auc": 0.9511,
+   "grounding_precision": 0.6516
+  },
+  {
+   "key": "s3v2",
+   "label": "S3 graph agent with tools (v2)",
+   "f1": 0.9243,
+   "f1_ci": [
+    0.9065,
+    0.9407
+   ],
+   "auc": 0.9601,
+   "grounding_precision": 0.6577
+  },
+  {
+   "key": "s4",
+   "label": "S4 graph as flat text, one pass",
+   "f1": 0.9672,
+   "f1_ci": [
+    0.9561,
+    0.9778
+   ],
+   "auc": 0.9917,
+   "grounding_precision": 0.6272
+  }
+ ],
+ "robustness": [
+  {
+   "system": "S2",
+   "gemma": 0.9301,
+   "paraphrased": null,
+   "qwen": 0.8907
+  },
+  {
+   "system": "S3 v1",
+   "gemma": 0.935,
+   "paraphrased": 0.9363,
+   "qwen": 0.9389
+  },
+  {
+   "system": "S4",
+   "gemma": 0.9672,
+   "paraphrased": 0.9699,
+   "qwen": 0.9621
+  }
+ ],
+ "clips": 799,
+ "faithfulness": {
+  "s3": {
+   "cited": 0.4639,
+   "random": 0.0289
+  },
+  "s3v2": {
+   "cited": 0.5491,
+   "random": 0.0167
+  },
+  "s4": {
+   "cited": 0.4911,
+   "random": 0.0059
+  }
+ },
+ "graph": {
+  "nodes": 51542,
+  "edges": 45622,
+  "median_nodes": 46,
+  "node_kinds": {
+   "sound_event": 1476,
+   "transcript_segment": 10634,
+   "speech_tag": 1067,
+   "caption": 24808,
+   "detection": 13557
+  },
+  "edge_types": {
+   "same_event": 30530,
+   "supports": 14009,
+   "derived_from": 1067,
+   "contradicts": 16
+  }
+ },
+ "sound_gain": {
+  "f1_diff": 0.0122,
+  "f1_diff_ci": [
+   0.0036,
+   0.0213
+  ]
+ },
+ "cost_ratio": 3.2624
+}

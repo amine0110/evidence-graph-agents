@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 440" width="1100" height="440" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Perception agents write observations into an evidence graph; four systems decide whether a clip needs an operator's attention.</title>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2f7"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1100" height="440" rx="18" fill="url(#bg)"/>
+
+  <!-- clip -->
+  <g>
+    <rect x="28" y="160" width="112" height="96" rx="12" fill="#0f172a"/>
+    <rect x="40" y="172" width="88" height="50" rx="5" fill="#334155"/>
+    <path d="M76 186 L94 197 L76 208 z" fill="#e2e8f0"/>
+    <path d="M42 238 q6 -10 12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0" fill="none" stroke="#f59e0b" stroke-width="2"/>
+    <text x="84" y="280" text-anchor="middle" font-size="14" font-weight="600" fill="#0f172a">Clip</text>
+    <text x="84" y="297" text-anchor="middle" font-size="12" fill="#475569">video + sound</text>
+  </g>
+
+  <!-- perception agents -->
+  <text x="272" y="44" text-anchor="middle" font-size="12" font-weight="600" letter-spacing="1.5" fill="#64748b">PERCEPTION AGENTS</text>
+  <g font-size="13" fill="#0f172a">
+    <rect x="200" y="60"  width="144" height="46" rx="10" fill="#fff" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="218" cy="83" r="6" fill="#3b82f6"/><text x="232" y="80">Video describer</text><text x="232" y="96" font-size="11" fill="#64748b">every 4 s</text>
+    <rect x="200" y="118" width="144" height="46" rx="10" fill="#fff" stroke="#8b5cf6" stroke-width="1.5"/>
+    <circle cx="218" cy="141" r="6" fill="#8b5cf6"/><text x="232" y="138">Object detectors</text><text x="232" y="154" font-size="11" fill="#64748b">people, weapons</text>
+    <rect x="200" y="176" width="144" height="46" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.5"/>
+    <circle cx="218" cy="199" r="6" fill="#f59e0b"/><text x="232" y="196">Sound tagger</text><text x="232" y="212" font-size="11" fill="#64748b">gunshot, scream, ...</text>
+    <rect x="200" y="234" width="144" height="46" rx="10" fill="#fff" stroke="#14b8a6" stroke-width="1.5"/>
+    <circle cx="218" cy="257" r="6" fill="#14b8a6"/><text x="232" y="254">Speech recognition</text><text x="232" y="270" font-size="11" fill="#64748b">transcript</text>
+    <rect x="200" y="292" width="144" height="46" rx="10" fill="#fff" stroke="#e11d48" stroke-width="1.5"/>
+    <circle cx="218" cy="315" r="6" fill="#e11d48"/><text x="232" y="312">Speech tagger</text><text x="232" y="328" font-size="11" fill="#64748b">threat, distress</text>
+  </g>
+  <g stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#ar)">
+    <path d="M140 196 C170 196 170 83 196 83"/>
+    <path d="M140 202 C170 202 170 141 196 141"/>
+    <path d="M140 208 L196 199"/>
+    <path d="M140 214 C170 214 170 257 196 257"/>
+    <path d="M272 280 L272 288"/>
+  </g>
+
+  <!-- evidence graph -->
+  <g stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#ar)">
+    <path d="M344 83  C380 83  380 180 406 190"/>
+    <path d="M344 141 C375 141 380 195 406 200"/>
+    <path d="M344 199 L406 208"/>
+    <path d="M344 257 C375 257 380 222 406 216"/>
+    <path d="M344 315 C380 315 380 232 406 224"/>
+  </g>
+  <rect x="410" y="64" width="232" height="300" rx="16" fill="#fff" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="526" y="92" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Evidence graph</text>
+  <text x="526" y="110" text-anchor="middle" font-size="11" fill="#64748b">one per clip, append-only</text>
+  <g stroke-width="1.6">
+    <line x1="458" y1="160" x2="520" y2="140" stroke="#94a3b8"/>
+    <line x1="520" y1="140" x2="590" y2="168" stroke="#16a34a"/>
+    <line x1="458" y1="160" x2="482" y2="226" stroke="#94a3b8"/>
+    <line x1="482" y1="226" x2="560" y2="240" stroke="#16a34a"/>
+    <line x1="590" y1="168" x2="560" y2="240" stroke="#94a3b8"/>
+    <line x1="520" y1="140" x2="560" y2="240" stroke="#dc2626" stroke-dasharray="5 4"/>
+    <line x1="560" y1="240" x2="606" y2="222" stroke="#94a3b8" stroke-dasharray="2 3"/>
+  </g>
+  <circle cx="458" cy="160" r="11" fill="#3b82f6"/>
+  <circle cx="520" cy="140" r="9"  fill="#f59e0b"/>
+  <circle cx="590" cy="168" r="12" fill="#3b82f6"/>
+  <circle cx="482" cy="226" r="8"  fill="#8b5cf6"/>
+  <circle cx="560" cy="240" r="10" fill="#14b8a6"/>
+  <circle cx="606" cy="222" r="7"  fill="#e11d48"/>
+  <g font-size="11" fill="#334155">
+    <line x1="432" y1="282" x2="456" y2="282" stroke="#94a3b8" stroke-width="2"/><text x="462" y="286">same event</text>
+    <line x1="540" y1="282" x2="564" y2="282" stroke="#16a34a" stroke-width="2"/><text x="570" y="286">supports</text>
+    <line x1="432" y1="304" x2="456" y2="304" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/><text x="462" y="308">contradicts</text>
+    <line x1="540" y1="304" x2="564" y2="304" stroke="#94a3b8" stroke-width="2" stroke-dasharray="2 3"/><text x="570" y="308">derived from</text>
+    <text x="526" y="336" text-anchor="middle" fill="#64748b">node = one observation, with</text><text x="526" y="351" text-anchor="middle" fill="#64748b">time, source and confidence</text>
+  </g>
+
+  <!-- systems -->
+  <text x="808" y="44" text-anchor="middle" font-size="12" font-weight="600" letter-spacing="1.5" fill="#64748b">SAME REASONING MODEL, THREE INTERFACES</text>
+  <g stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#ar)">
+    <path d="M642 180 C680 180 680 100 706 100"/>
+    <path d="M642 210 L706 196"/>
+    <path d="M642 240 C680 240 680 292 706 292"/>
+  </g>
+  <g font-size="13" fill="#0f172a">
+    <rect x="710" y="72" width="196" height="56" rx="10" fill="#fff7ed" stroke="#fb923c" stroke-width="1.5"/>
+    <text x="724" y="96" font-weight="700">S2</text><text x="752" y="96">message passing</text>
+    <text x="724" y="114" font-size="11" fill="#64748b">agents answer follow-up questions</text>
+    <rect x="710" y="168" width="196" height="56" rx="10" fill="#fff7ed" stroke="#fb923c" stroke-width="1.5"/>
+    <text x="724" y="192" font-weight="700">S3</text><text x="752" y="192">graph agent with tools</text>
+    <text x="724" y="210" font-size="11" fill="#64748b">explores the graph in several turns</text>
+    <rect x="710" y="264" width="196" height="56" rx="10" fill="#fff7ed" stroke="#fb923c" stroke-width="1.5"/>
+    <text x="724" y="288" font-weight="700">S4</text><text x="752" y="288">flat text, one pass</text>
+    <text x="724" y="306" font-size="11" fill="#64748b">every node as a line of text</text>
+  </g>
+  <g stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#ar)">
+    <path d="M906 100 C934 100 934 186 956 192"/>
+    <path d="M906 196 L956 200"/>
+    <path d="M906 292 C934 292 934 214 956 208"/>
+  </g>
+  <rect x="960" y="160" width="116" height="80" rx="12" fill="#0f172a"/>
+  <text x="1018" y="190" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Decision</text>
+  <text x="1018" y="208" text-anchor="middle" font-size="11" fill="#cbd5e1">Yes / No, score,</text>
+  <text x="1018" y="224" text-anchor="middle" font-size="11" fill="#cbd5e1">segments, citations</text>
+
+  <!-- S1 -->
+  <rect x="410" y="384" width="496" height="38" rx="10" fill="#fef2f2" stroke="#f87171" stroke-width="1.5"/>
+  <text x="658" y="408" text-anchor="middle" font-size="13" fill="#0f172a"><tspan font-weight="700">S1</tspan>  one audio-visual model on the raw clip (no agents, no graph)</text>
+  <g stroke="#64748b" stroke-width="1.5" fill="none">
+    <path d="M84 300 L84 403 L404 403" marker-end="url(#ar)"/>
+    <path d="M906 403 L1018 403 L1018 246" marker-end="url(#ar)"/>
+  </g>
+</svg>

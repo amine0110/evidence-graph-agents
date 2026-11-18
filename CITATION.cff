@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "What Helps Language-Model Agents Review Violent Video? A Controlled Comparison with a Human Evidence Reference"
+type: software
+license: MIT
+repository-code: "https://github.com/amine0110/evidence-graph-agents"
+url: "https://amine0110.github.io/evidence-graph-agents/"
+authors:
+  - family-names: Mokhtari
+    given-names: Mohammed El Amine
+    affiliation: University of Mons
+    email: mohammedelamine.mokhtari@umons.ac.be
+  - family-names: Mancas
+    given-names: Matei
+    affiliation: University of Mons
+  - family-names: Vandenbulcke
+    given-names: Virginie
+    affiliation: University of Mons
