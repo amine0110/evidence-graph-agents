@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evidence Graph Agents</title>
+  <meta name="description" content="What helps language-model agents review violent video? A controlled comparison of message passing, a typed evidence graph and flat text, with a human evidence reference.">
+  <meta property="og:title" content="What Helps Language-Model Agents Review Violent Video?">
+  <meta property="og:description" content="A controlled comparison with a human evidence reference. University of Mons.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Preprint · University of Mons</p>
+      <h1>What Helps Language-Model Agents Review Violent Video?</h1>
+      <p class="subtitle">A Controlled Comparison with a Human Evidence Reference</p>
+      <p class="authors">
+        <span>Mohammed El Amine Mokhtari</span>
+        <span>Matei Mancas</span>
+        <span>Virginie Vandenbulcke</span>
+      </p>
+      <p class="affil">University of Mons (UMONS), Belgium</p>
+      <nav class="buttons">
+        <span class="btn disabled" title="The arXiv link will be added when the preprint is posted">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z M14 2v6h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          Paper <small>arXiv, soon</small>
+        </span>
+        <a class="btn" href="https://github.com/amine0110/evidence-graph-agents">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+          Code
+        </a>
+        <a class="btn" href="https://huggingface.co/datasets/amine0110/xd-violence-review">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          Human reference <small>Hugging Face</small>
+        </a>
+        <a class="btn" href="#cite">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h4v4H8c0 2 1 3 3 3v3c-4 0-6-2-6-6V7zm9 0h4v4h-3c0 2 1 3 3 3v3c-4 0-6-2-6-6V7z" fill="currentColor"/></svg>
+          BibTeX
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="tldr">
+      <h2>In short</h2>
+      <p>Systems that flag violent video for a human operator can be built from language models without training: perception models describe what they see and hear, and a language model decides. We keep the perception agents and the reasoning model fixed and change only <em>how the observations reach the decision</em>: messages between agents, a typed evidence graph explored with tools, or flat text read in one pass. A single audio-visual model on the raw clip is the reference point, and two annotators record which evidence (sight, sound or speech) they relied on.</p>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section>
+      <h2>How the systems are built</h2>
+      <figure class="figure">
+        <img src="assets/overview.svg" alt="Five perception agents (video describer, object detectors, sound tagger, speech recognition, speech tagger) write observations into an evidence graph. Three systems read it with the same reasoning model: S2 message passing, S3 graph agent with tools, S4 flat text in one pass. S1 is one audio-visual model on the raw clip. All output a decision, score, segments and citations.">
+      </figure>
+    </section>
+
+    <section id="graph">
+      <h2>Explore one evidence graph</h2>
+      <p class="lead">This is the real graph of the worked example in the paper: a <span data-k="duration"></span>-second clip from a film, labelled <strong>shooting</strong>. Each node is one observation by one agent; edges were added by rules. Hover or tap a node to read it, and pick a system below to see which nodes it cited.</p>
+      <div class="graph-card">
+        <div class="graph-toolbar">
+          <div class="seg" role="tablist" aria-label="Layout">
+            <button class="on" data-layout="network" role="tab" aria-selected="true">Network</button>
+            <button data-layout="timeline" role="tab" aria-selected="false">Timeline</button>
+          </div>
+          <div class="legend" id="edge-legend" aria-label="Edge types"></div>
+        </div>
+        <div class="graph-body">
+          <svg id="graph-svg" viewBox="0 0 1000 520" role="img" aria-label="Evidence graph of the example clip"></svg>
+          <aside class="node-panel" id="node-panel" aria-live="polite">
+            <p class="hint">Hover a node to see what the agent recorded.</p>
+          </aside>
+        </div>
+        <div class="node-legend" id="node-legend"></div>
+      </div>
+
+      <h3>What each system answered on this clip</h3>
+      <div class="answers" id="answers"></div>
+      <p class="note" id="trace"></p>
+    </section>
+
+    <section id="results">
+      <h2>Results on the XD-Violence test set</h2>
+      <p class="lead">F1 of the Yes/No decision on <span data-k="clips"></span> clips, with 95% bootstrap intervals. Flat text (S4) matches the single audio-visual model (S1); the graph agent (S3) and message passing (S2) are less accurate.</p>
+      <div class="chart-card"><svg id="f1-chart" viewBox="0 0 900 330" role="img" aria-label="F1 by system"></svg></div>
+
+      <h3>Robustness</h3>
+      <p class="lead">The same comparison with reworded system prompts and with a larger reasoning model (Qwen3.6-35B-A3B instead of Gemma 4 12B). The ordering of S3 and S4 holds; the larger model weakens message passing.</p>
+      <div class="table-wrap"><table id="robust"></table></div>
+    </section>
+
+    <section>
+      <h2>Main findings</h2>
+      <ol class="findings" id="findings"></ol>
+    </section>
+
+    <section>
+      <h2>Data and code</h2>
+      <div class="cards">
+        <a class="card" href="https://huggingface.co/datasets/amine0110/xd-violence-review">
+          <h3>Human evidence reference</h3>
+          <p>Decisions, incident segments and the modality each annotator relied on (visual, sound, speech), for XD-Violence test clips. Annotations only, no video. CC BY-NC 4.0, access on request.</p>
+          <span class="more">huggingface.co/datasets/amine0110/xd-violence-review →</span>
+        </a>
+        <a class="card" href="https://github.com/amine0110/evidence-graph-agents">
+          <h3>Code</h3>
+          <p>Evidence graph schema and store, the perception agents, the edge builder, the four systems, the evaluation and the frozen results behind every number in the paper. MIT licence.</p>
+          <span class="more">github.com/amine0110/evidence-graph-agents →</span>
+        </a>
+      </div>
+      <p class="note">The XD-Violence videos are not redistributed; obtain them from the official XD-Violence page under its terms.</p>
+    </section>
+
+    <section id="cite">
+      <h2>Citation</h2>
+      <div class="bib">
+        <button class="copy" id="copy-bib" type="button">Copy</button>
+<pre id="bibtex">@misc{mokhtari2026violentvideo,
+  title  = {What Helps Language-Model Agents Review Violent Video?
+            A Controlled Comparison with a Human Evidence Reference},
+  author = {Mokhtari, Mohammed El Amine and Mancas, Matei and Vandenbulcke, Virginie},
+  year   = {2026},
+  note   = {Preprint, University of Mons}
+}</pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>University of Mons · Contact: <a href="mailto:mohammedelamine.mokhtari@umons.ac.be">mohammedelamine.mokhtari@umons.ac.be</a></p>
+      <p class="muted">Numbers on this page are read from the frozen results in the repository (<code>docs/build_site_data.py</code>).</p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
