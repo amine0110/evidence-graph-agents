@@ -1,0 +1,151 @@
+{
+ "clips": 799,
+ "errors": {
+  "s1": {
+   "errors": 33,
+   "false_pos": 30,
+   "false_neg": 3
+  },
+  "s2": {
+   "errors": 70,
+   "false_pos": 37,
+   "false_neg": 33
+  },
+  "s3": {
+   "errors": 64,
+   "false_pos": 25,
+   "false_neg": 39
+  },
+  "s3v2": {
+   "errors": 74,
+   "false_pos": 27,
+   "false_neg": 47
+  },
+  "s4": {
+   "errors": 33,
+   "false_pos": 21,
+   "false_neg": 12
+  }
+ },
+ "discordant": {
+  "s4 - s1": {
+   "clips": 46,
+   "a_right": 23,
+   "b_right": 23,
+   "p_mcnemar": 1.0
+  },
+  "s4 - s2": {
+   "clips": 53,
+   "a_right": 45,
+   "b_right": 8,
+   "p_mcnemar": 2.37e-07
+  },
+  "s4 - s3": {
+   "clips": 49,
+   "a_right": 40,
+   "b_right": 9,
+   "p_mcnemar": 9.26e-06
+  },
+  "s4 - s3v2": {
+   "clips": 51,
+   "a_right": 46,
+   "b_right": 5,
+   "p_mcnemar": 2.33e-09
+  },
+  "s3 - s2": {
+   "clips": 66,
+   "a_right": 36,
+   "b_right": 30,
+   "p_mcnemar": 0.539
+  }
+ },
+ "short": {
+  "share_cut": 0.1954,
+  "violent": 125,
+  "normal": 300,
+  "runs": {
+   "s1": {
+    "f1": 0.8849,
+    "precision": 0.8039,
+    "recall": 0.984,
+    "f1_ci": [
+     0.8421,
+     0.92
+    ]
+   },
+   "s2": {
+    "f1": 0.8044,
+    "precision": 0.7466,
+    "recall": 0.872,
+    "f1_ci": [
+     0.7489,
+     0.8531
+    ]
+   },
+   "s3": {
+    "f1": 0.8189,
+    "precision": 0.8062,
+    "recall": 0.832,
+    "f1_ci": [
+     0.7611,
+     0.8662
+    ]
+   },
+   "s3v2": {
+    "f1": 0.8125,
+    "precision": 0.7939,
+    "recall": 0.832,
+    "f1_ci": [
+     0.7576,
+     0.8595
+    ]
+   },
+   "s4": {
+    "f1": 0.8981,
+    "precision": 0.85,
+    "recall": 0.952,
+    "f1_ci": [
+     0.8571,
+     0.9323
+    ]
+   }
+  },
+  "pairs": {
+   "s4 - s1": {
+    "f1_diff": 0.0132,
+    "f1_diff_ci": [
+     -0.0284,
+     0.0553
+    ]
+   },
+   "s4 - s2": {
+    "f1_diff": 0.0937,
+    "f1_diff_ci": [
+     0.0516,
+     0.1416
+    ]
+   },
+   "s4 - s3": {
+    "f1_diff": 0.0792,
+    "f1_diff_ci": [
+     0.0344,
+     0.1254
+    ]
+   },
+   "s4 - s3v2": {
+    "f1_diff": 0.0856,
+    "f1_diff_ci": [
+     0.0446,
+     0.1332
+    ]
+   },
+   "s3 - s2": {
+    "f1_diff": 0.0145,
+    "f1_diff_ci": [
+     -0.0336,
+     0.0627
+    ]
+   }
+  }
+ }
+}
