@@ -5,6 +5,10 @@ type: software
 license: MIT
 repository-code: "https://github.com/amine0110/evidence-graph-agents"
 url: "https://amine0110.github.io/evidence-graph-agents/"
+identifiers:
+  - type: doi
+    value: "10.48550/arXiv.2611.26776"
+    description: "The paper on arXiv"
 authors:
   - family-names: Mokhtari
     given-names: Mohammed El Amine
@@ -16,3 +20,17 @@ authors:
   - family-names: Vandenbulcke
     given-names: Virginie
     affiliation: University of Mons
+preferred-citation:
+  type: article
+  title: "What Helps Language-Model Agents Review Violent Video? A Controlled Comparison with a Human Evidence Reference"
+  authors:
+    - family-names: Mokhtari
+      given-names: Mohammed El Amine
+    - family-names: Mancas
+      given-names: Matei
+    - family-names: Vandenbulcke
+      given-names: Virginie
+  year: 2026
+  journal: "arXiv preprint arXiv:2611.26776"
+  doi: "10.48550/arXiv.2611.26776"
+  url: "https://arxiv.org/abs/2611.26776"

@@ -1,5 +1,6 @@
 # What Helps Language-Model Agents Review Violent Video?
 
+[![arXiv](https://img.shields.io/badge/arXiv-2611.26776-b31b1b)](https://arxiv.org/abs/2611.26776)
 [![Project page](https://img.shields.io/badge/project-page-2563eb)](https://amine0110.github.io/evidence-graph-agents/)
 [![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20dataset-xd--violence--review-ffcc4d)](https://huggingface.co/datasets/amine0110/xd-violence-review)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
@@ -7,7 +8,8 @@
 
 Code for *What Helps Language-Model Agents Review Violent Video? A Controlled
 Comparison with a Human Evidence Reference* (Mokhtari, Mancas, Vandenbulcke,
-University of Mons). **Project page:** <https://amine0110.github.io/evidence-graph-agents/>
+University of Mons). **Paper:** <https://arxiv.org/abs/2611.26776>.
+**Project page:** <https://amine0110.github.io/evidence-graph-agents/>
 
 <p align="center">
   <img src="docs/assets/overview.svg" alt="Perception agents write observations into an evidence graph; message passing (S2), a graph agent with tools (S3) and flat text (S4) read it with the same reasoning model; S1 is one audio-visual model on the raw clip." width="100%">
@@ -89,11 +91,15 @@ and preview locally with `python -m http.server --directory docs`.
 
 ```bibtex
 @misc{mokhtari2026violentvideo,
-  title  = {What Helps Language-Model Agents Review Violent Video?
-            A Controlled Comparison with a Human Evidence Reference},
-  author = {Mokhtari, Mohammed El Amine and Mancas, Matei and Vandenbulcke, Virginie},
-  year   = {2026},
-  note   = {Preprint, University of Mons}
+  title         = {What Helps Language-Model Agents Review Violent Video?
+                   A Controlled Comparison with a Human Evidence Reference},
+  author        = {Mokhtari, Mohammed El Amine and Mancas, Matei and Vandenbulcke, Virginie},
+  year          = {2026},
+  eprint        = {2611.26776},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  doi           = {10.48550/arXiv.2611.26776},
+  url           = {https://arxiv.org/abs/2611.26776}
 }
 ```
 
